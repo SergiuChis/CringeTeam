@@ -1,0 +1,100 @@
+{
+  "main": {
+    "id": "ab276dabc598ea6c",
+    "type": "split",
+    "children": [
+      {
+        "id": "8ac926ac155cf700",
+        "type": "leaf",
+        "active": true,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Phase 3.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c8365db73c331daf",
+    "type": "split",
+    "children": [
+      {
+        "id": "966019bda4fecd76",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7cf4e7f02e1e15a6",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "9eaadbeac40d9f46",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "ed8fbb2b300a26e3",
+    "type": "split",
+    "children": [
+      {
+        "id": "d16716b939c57359",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c5f3ca8895e577e8",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Phase 3.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "lastOpenFiles": [
+    "Phase 3.md",
+    "Parts to Question.md",
+    "Phase 2.md",
+    "Untitled.md",
+    "Objectives.md",
+    "Conference Management System (CMS).md",
+    "Phase 0.md",
+    "Domain.md",
+    "Users.md",
+    "Phase 1.md"
+  ]
+}
