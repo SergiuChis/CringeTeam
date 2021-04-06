@@ -1,3 +1,0 @@
-# Python GUI
-
-## PyQT5
