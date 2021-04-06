@@ -10,9 +10,9 @@ namespace CringeProject.Entities
     {
         public string UserName { get; set; }
         public string Password { get; set; }
-        public string Type { get; set; }
+        public UserType Type { get; set; }
 
-        public User(string userName, string password, string type)
+        public User(string userName, string password, UserType type)
         {
             UserName = userName ?? throw new ArgumentNullException(nameof(userName));
             Password = password ?? throw new ArgumentNullException(nameof(password));
