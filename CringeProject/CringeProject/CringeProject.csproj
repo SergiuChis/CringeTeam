@@ -191,10 +191,37 @@
     <Compile Include="LoginWindow.Designer.cs">
       <DependentUpon>LoginWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Messages\ReviewStatus.cs" />
+    <Compile Include="Messages\Status.cs" />
+    <Compile Include="Migrations\202104062015423_InitialCreate.cs" />
+    <Compile Include="Migrations\202104062015423_InitialCreate.designer.cs">
+      <DependentUpon>202104062015423_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104062020197_initial.cs" />
+    <Compile Include="Migrations\202104062020197_initial.designer.cs">
+      <DependentUpon>202104062020197_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104062058024_usermodelchanged.cs" />
+    <Compile Include="Migrations\202104062058024_usermodelchanged.designer.cs">
+      <DependentUpon>202104062058024_usermodelchanged.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\SectionPapersContext.cs" />
+    <Compile Include="Repository\UserPaperContext.cs" />
+    <Compile Include="Repository\UsersSectionsContext.cs" />
     <EmbeddedResource Include="LoginWindow.resx">
       <DependentUpon>LoginWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104062015423_InitialCreate.resx">
+      <DependentUpon>202104062015423_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104062020197_initial.resx">
+      <DependentUpon>202104062020197_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104062058024_usermodelchanged.resx">
+      <DependentUpon>202104062058024_usermodelchanged.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -219,6 +246,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

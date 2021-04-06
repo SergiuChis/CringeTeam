@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using CringeProject.Repository;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
@@ -29,7 +30,7 @@ namespace CringeProject
         }
 
         private static void ConfigureServices(ServiceCollection services) {
-            services.AddScoped<LoginWindow>();
+            services.AddScoped<LoginWindow>().AddScoped<UsersSectionsContext>();
 
             //Structure: 
             /*services.AddLogging(configure => configure.AddConsole())
