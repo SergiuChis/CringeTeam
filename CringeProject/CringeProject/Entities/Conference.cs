@@ -10,6 +10,5 @@ namespace CringeProject.Entities {
         public DateTime SubmissionDeadline { get; set; }
         public List<User> Users { get; set; }
         public List<Section> Sections { get; set; }
-        public User Chair { get; set; }
     }
 }
