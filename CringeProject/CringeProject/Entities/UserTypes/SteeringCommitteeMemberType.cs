@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CringeProject.Entities.UserTypes
 {
-    class SteeringCommitteeMemberType : UserType
+    public class SteeringCommitteeMemberType : UserType
     {
         public SteeringCommitteeMemberType()
         {

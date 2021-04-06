@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CringeProject.Messages
 {
-    class Status
+    public class Status
     {
         public string Message { get; set; }
         public bool IsSuccessful { get; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CringeProject.Entities.UserTypes
 {
-    class ListenerType : UserType
+    public class ListenerType : UserType
     {
         public ListenerType()
         {

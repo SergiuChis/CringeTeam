@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CringeProject.Entities
 {
-    class ConferenceChairType : UserType
+    public class ConferenceChairType : UserType
     {
         public ConferenceChairType()
         {

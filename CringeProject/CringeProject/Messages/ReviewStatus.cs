@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CringeProject.Messages
 {
-    class ReviewStatus
+    public class ReviewStatus
     {
         public readonly string ACCEPTED = "accepted";
         public readonly string DECLINED = "declined";
