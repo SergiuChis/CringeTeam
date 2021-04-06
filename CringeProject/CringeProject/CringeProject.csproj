@@ -179,7 +179,12 @@
     <Compile Include="Entities\Paper.cs" />
     <Compile Include="Entities\Section.cs" />
     <Compile Include="Entities\User.cs" />
-    <Compile Include="Entities\UserType.cs" />
+    <Compile Include="Entities\UserTypes\ConferenceChairType.cs" />
+    <Compile Include="Entities\UserTypes\ListenerType.cs" />
+    <Compile Include="Entities\UserTypes\ProgramCommitteeMemberType.cs" />
+    <Compile Include="Entities\UserTypes\SessionChairType.cs" />
+    <Compile Include="Entities\UserTypes\SteeringCommitteeMemberType.cs" />
+    <Compile Include="Entities\UserTypes\UserType.cs" />
     <Compile Include="LoginWindow.cs">
       <SubType>Form</SubType>
     </Compile>
