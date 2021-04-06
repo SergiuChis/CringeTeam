@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CringeProject.Entities.Users
+namespace CringeProject.Entities
 {
-    class User
+    public class User
     {
-        private string UserName { get; set; }
-        private string Password { get; set; }
-        private string Type { get; set; }
+        public string UserName { get; set; }
+        public string Password { get; set; }
+        public string Type { get; set; }
 
         public User(string userName, string password, string type)
         {

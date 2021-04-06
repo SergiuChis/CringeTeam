@@ -7,9 +7,9 @@ using System.IO;
 
 namespace CringeProject.Entities
 {
-    class Paper
+    public class Paper
     {
-        private string Abstract { get; set; }
-        private File Body;
+        public string Abstract { get; set; }
+        public string Body { get; set; } //TODO: change this from path to actual file
     }
 }
