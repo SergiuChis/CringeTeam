@@ -185,6 +185,18 @@
     <Compile Include="Entities\UserTypes\SessionChairType.cs" />
     <Compile Include="Entities\UserTypes\SteeringCommitteeMemberType.cs" />
     <Compile Include="Entities\UserTypes\UserType.cs" />
+    <Compile Include="GUI\BaseWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BaseWindow.Designer.cs">
+      <DependentUpon>BaseWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ProgramCommittee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ProgramCommittee.Designer.cs">
+      <DependentUpon>ProgramCommittee.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginWindow.cs">
       <SubType>Form</SubType>
     </Compile>
