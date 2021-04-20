@@ -185,17 +185,17 @@
     <Compile Include="Entities\UserTypes\SessionChairType.cs" />
     <Compile Include="Entities\UserTypes\SteeringCommitteeMemberType.cs" />
     <Compile Include="Entities\UserTypes\UserType.cs" />
-    <Compile Include="GUI\BaseWindow.cs">
+    <Compile Include="GUI\ListenerWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\BaseWindow.Designer.cs">
-      <DependentUpon>BaseWindow.cs</DependentUpon>
+    <Compile Include="GUI\ListenerWindow.Designer.cs">
+      <DependentUpon>ListenerWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\ProgramCommittee.cs">
+    <Compile Include="GUI\ProgramCommitteeWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\ProgramCommittee.Designer.cs">
-      <DependentUpon>ProgramCommittee.cs</DependentUpon>
+    <Compile Include="GUI\ProgramCommitteeWindow.Designer.cs">
+      <DependentUpon>ProgramCommitteeWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginWindow.cs">
       <SubType>Form</SubType>
@@ -223,6 +223,12 @@
     <Compile Include="Repository\SectionPapersContext.cs" />
     <Compile Include="Repository\UserPaperContext.cs" />
     <Compile Include="Repository\UsersSectionsContext.cs" />
+    <Compile Include="Services\AuthorService.cs" />
+    <Compile Include="Services\dummy.cs" />
+    <Compile Include="Services\UserService.cs" />
+    <EmbeddedResource Include="GUI\ListenerWindow.resx">
+      <DependentUpon>ListenerWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginWindow.resx">
       <DependentUpon>LoginWindow.cs</DependentUpon>
     </EmbeddedResource>

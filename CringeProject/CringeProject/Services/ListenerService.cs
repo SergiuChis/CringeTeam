@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace CringeProject.Services
 {
-    class dummy
+    class ListenerService : AuthorService
     {
+
     }
 }
