@@ -1,7 +1,6 @@
-﻿namespace CringeProject
-{
-    partial class LoginWindow
-    {
+﻿
+namespace CringeProject.GUI {
+    partial class CreateUserWindow {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -11,10 +10,8 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
+        protected override void Dispose(bool disposing) {
+            if (disposing && (components != null)) {
                 components.Dispose();
             }
             base.Dispose(disposing);
@@ -26,24 +23,13 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
-        {
-            this.SuspendLayout();
-            // 
-            // LoginWindow
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+        private void InitializeComponent() {
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 562);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "LoginWindow";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.LoginWindow_Load);
-            this.ResumeLayout(false);
-
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "CreateUserWindow";
         }
 
         #endregion
     }
 }
-

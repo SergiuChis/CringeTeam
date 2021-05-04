@@ -2,11 +2,14 @@
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Windows.Forms;
+using CringeProject.GUI;
 
 namespace CringeProject
 {
-    static class Program
+    public static class Program
     {
+        public static IServiceProvider ServiceProvider { get; set; }
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -18,11 +21,9 @@ namespace CringeProject
 
             var services = new ServiceCollection();
             ConfigureServices(services);
-            using (var serviceProvider = services.BuildServiceProvider()) {
-                var mainForm = serviceProvider.GetRequiredService<LoginWindow>();
-                Application.Run(mainForm);
-            }
 
+            var mainForm = WindowCreationFactory.CreateLoginWindow();
+            Application.Run(mainForm);
         }
 
         private static void ConfigureServices(ServiceCollection services) {
@@ -30,6 +31,7 @@ namespace CringeProject
                 .AddScoped<LoginWindow>()
                 .AddScoped<RepositoryContext>();
 
+            ServiceProvider = services.BuildServiceProvider();
             //Structure: 
             /*services.AddLogging(configure => configure.AddConsole())
                     .AddScoped<IBusinessLayer, CBusinessLayer>()
