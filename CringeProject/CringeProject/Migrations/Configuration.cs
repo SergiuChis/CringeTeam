@@ -5,15 +5,14 @@
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<CringeProject.Repository.UsersSectionsContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<CringeProject.Repository.RepositoryContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "CringeProject.Repository.UserSections";
         }
 
-        protected override void Seed(CringeProject.Repository.UsersSectionsContext context)
+        protected override void Seed(CringeProject.Repository.RepositoryContext context)
         {
             //  This method will be called after migrating to the latest version.
 

@@ -7,13 +7,13 @@ namespace CringeProject.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class usermodelchanged : IMigrationMetadata
+    public sealed partial class RefactoringDbContext : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(usermodelchanged));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(RefactoringDbContext));
         
         string IMigrationMetadata.Id
         {
-            get { return "202104062058024_usermodelchanged"; }
+            get { return "202105041927372_RefactoringDbContext"; }
         }
         
         string IMigrationMetadata.Source

@@ -185,18 +185,6 @@
     <Compile Include="Entities\UserTypes\SessionChairType.cs" />
     <Compile Include="Entities\UserTypes\SteeringCommitteeMemberType.cs" />
     <Compile Include="Entities\UserTypes\UserType.cs" />
-    <Compile Include="GUI\BaseWindow.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\BaseWindow.Designer.cs">
-      <DependentUpon>BaseWindow.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\ProgramCommittee.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\ProgramCommittee.Designer.cs">
-      <DependentUpon>ProgramCommittee.cs</DependentUpon>
-    </Compile>
     <Compile Include="LoginWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,35 +193,19 @@
     </Compile>
     <Compile Include="Messages\ReviewStatus.cs" />
     <Compile Include="Messages\Status.cs" />
-    <Compile Include="Migrations\202104062015423_InitialCreate.cs" />
-    <Compile Include="Migrations\202104062015423_InitialCreate.designer.cs">
-      <DependentUpon>202104062015423_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104062020197_initial.cs" />
-    <Compile Include="Migrations\202104062020197_initial.designer.cs">
-      <DependentUpon>202104062020197_initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104062058024_usermodelchanged.cs" />
-    <Compile Include="Migrations\202104062058024_usermodelchanged.designer.cs">
-      <DependentUpon>202104062058024_usermodelchanged.cs</DependentUpon>
+    <Compile Include="Migrations\202105041927372_RefactoringDbContext.cs" />
+    <Compile Include="Migrations\202105041927372_RefactoringDbContext.designer.cs">
+      <DependentUpon>202105041927372_RefactoringDbContext.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\SectionPapersContext.cs" />
-    <Compile Include="Repository\UserPaperContext.cs" />
-    <Compile Include="Repository\UsersSectionsContext.cs" />
+    <Compile Include="Repository\RepositoryContext.cs" />
     <EmbeddedResource Include="LoginWindow.resx">
       <DependentUpon>LoginWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104062015423_InitialCreate.resx">
-      <DependentUpon>202104062015423_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104062020197_initial.resx">
-      <DependentUpon>202104062020197_initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104062058024_usermodelchanged.resx">
-      <DependentUpon>202104062058024_usermodelchanged.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105041927372_RefactoringDbContext.resx">
+      <DependentUpon>202105041927372_RefactoringDbContext.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -258,7 +230,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="GUI\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
