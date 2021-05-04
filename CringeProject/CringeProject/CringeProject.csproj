@@ -200,25 +200,13 @@
     </Compile>
     <Compile Include="Messages\ReviewStatus.cs" />
     <Compile Include="Messages\Status.cs" />
-    <Compile Include="Migrations\202105041927372_RefactoringDbContext.cs" />
-    <Compile Include="Migrations\202105041927372_RefactoringDbContext.designer.cs">
-      <DependentUpon>202105041927372_RefactoringDbContext.cs</DependentUpon>
+    <Compile Include="Migrations\202105042149199_sergiu-migration.cs" />
+    <Compile Include="Migrations\202105042149199_sergiu-migration.designer.cs">
+      <DependentUpon>202105042149199_sergiu-migration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202105042035091_participation-added.cs" />
-    <Compile Include="Migrations\202105042035091_participation-added.designer.cs">
-      <DependentUpon>202105042035091_participation-added.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105042057331_model-refactoring.cs" />
-    <Compile Include="Migrations\202105042057331_model-refactoring.designer.cs">
-      <DependentUpon>202105042057331_model-refactoring.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105042104591_conferences-dropped-participationId.cs" />
-    <Compile Include="Migrations\202105042104591_conferences-dropped-participationId.designer.cs">
-      <DependentUpon>202105042104591_conferences-dropped-participationId.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105042119085_test.cs" />
-    <Compile Include="Migrations\202105042119085_test.designer.cs">
-      <DependentUpon>202105042119085_test.cs</DependentUpon>
+    <Compile Include="Migrations\202105042151436_cirto-migration.cs" />
+    <Compile Include="Migrations\202105042151436_cirto-migration.designer.cs">
+      <DependentUpon>202105042151436_cirto-migration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
@@ -230,20 +218,11 @@
     <EmbeddedResource Include="GUI\LoginWindow.resx">
       <DependentUpon>LoginWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105041927372_RefactoringDbContext.resx">
-      <DependentUpon>202105041927372_RefactoringDbContext.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105042149199_sergiu-migration.resx">
+      <DependentUpon>202105042149199_sergiu-migration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105042035091_participation-added.resx">
-      <DependentUpon>202105042035091_participation-added.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105042057331_model-refactoring.resx">
-      <DependentUpon>202105042057331_model-refactoring.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105042104591_conferences-dropped-participationId.resx">
-      <DependentUpon>202105042104591_conferences-dropped-participationId.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105042119085_test.resx">
-      <DependentUpon>202105042119085_test.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105042151436_cirto-migration.resx">
+      <DependentUpon>202105042151436_cirto-migration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
