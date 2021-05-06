@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 using CringeProject.Entities;
@@ -13,9 +14,9 @@ namespace CringeProject.Services.Login {
             _repository = repository;
         }
 
-        public User Authenticate(string username, string password) {
+        public Task<User> Authenticate(string username, string password) {
             return _repository.Users
-                .FirstOrDefault(u => u.UserName == username && u.Password == password);
+                .Where(u => u.UserName == username && u.Password == password).FirstOrDefaultAsync();
         }
 
         public async Task<Status> CreateUser(string username, string password, string confirmedPassword) {

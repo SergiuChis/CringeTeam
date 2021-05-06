@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Windows.Forms;
 using CringeProject.GUI;
+using CringeProject.Services;
 using CringeProject.Services.Login;
 
 namespace CringeProject
@@ -31,7 +32,8 @@ namespace CringeProject
             services
                 .AddScoped<LoginWindow>()
                 .AddScoped<LoginService>()
-                .AddScoped<RepositoryContext>();
+                .AddScoped<RepositoryContext>()
+                .AddScoped<SteeringCommitteeService>();
 
             ServiceProvider = services.BuildServiceProvider();
             //Structure: 

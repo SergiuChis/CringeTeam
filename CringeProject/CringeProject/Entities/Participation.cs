@@ -5,7 +5,7 @@ namespace CringeProject.Entities {
     public class Participation
     {
         [Key, Column(Order = 0)]
-        public int UserId { get; set; }
+        public string UserName { get; set; }
         public User User { get; set; }
 
         [Key, Column(Order = 1)]
