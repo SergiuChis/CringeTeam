@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CringeProject.Entities {
+﻿namespace CringeProject.Entities.UserTypes {
     public abstract class UserType {
         public string Type { get; protected set; }
 

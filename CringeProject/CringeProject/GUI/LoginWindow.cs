@@ -20,7 +20,6 @@ namespace CringeProject.GUI {
 
         private void createAccountButton_Click(object sender, EventArgs e)
         {
-            _loginService.Authenticate("a", "b");
             WindowCreationFactory.CreateNewUserAccountWindow().Show();
         }
     }
