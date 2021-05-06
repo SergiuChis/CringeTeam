@@ -208,6 +208,10 @@
     <Compile Include="Migrations\202105042151436_cirto-migration.designer.cs">
       <DependentUpon>202105042151436_cirto-migration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105062000489_changed-user-pk.cs" />
+    <Compile Include="Migrations\202105062000489_changed-user-pk.designer.cs">
+      <DependentUpon>202105062000489_changed-user-pk.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -215,6 +219,9 @@
     <Compile Include="Services\BaseUserService.cs" />
     <Compile Include="Services\Login\LoginService.cs" />
     <Compile Include="WindowCreationFactory.cs" />
+    <EmbeddedResource Include="GUI\CreateUserWindow.resx">
+      <DependentUpon>CreateUserWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\LoginWindow.resx">
       <DependentUpon>LoginWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -223,6 +230,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105042151436_cirto-migration.resx">
       <DependentUpon>202105042151436_cirto-migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105062000489_changed-user-pk.resx">
+      <DependentUpon>202105062000489_changed-user-pk.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

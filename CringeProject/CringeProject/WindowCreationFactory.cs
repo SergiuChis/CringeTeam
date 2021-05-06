@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CringeProject.GUI;
-using CringeProject.Services;
+﻿using CringeProject.GUI;
 using CringeProject.Services.Login;
 
 namespace CringeProject {

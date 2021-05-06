@@ -7,11 +7,10 @@ namespace CringeProject.Entities
     public class User
     {
         [Key]
-        public int Id { get; set; }
+        public string UserName { get; set; }
 
         public virtual ICollection<Participation> Participations { get; set; }
 
-        public string UserName { get; }
         public string Password { get; }
 
         public User() {}

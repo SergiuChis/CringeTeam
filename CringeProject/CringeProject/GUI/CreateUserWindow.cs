@@ -12,5 +12,9 @@ namespace CringeProject.GUI {
 
             InitializeComponent();
         }
+
+        private void createUserButton_Click(object sender, System.EventArgs e) {
+
+        }
     }
 }
