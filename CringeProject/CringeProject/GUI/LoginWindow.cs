@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using CringeProject.Services;
+using CringeProject.Services.Login;
 
 namespace CringeProject.GUI {
     public partial class LoginWindow : Form

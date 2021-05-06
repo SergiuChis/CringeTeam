@@ -11,8 +11,8 @@ namespace CringeProject.Entities
 
         public virtual ICollection<Participation> Participations { get; set; }
 
-        public string UserName { get; set; }
-        public string Password { get; set; }
+        public string UserName { get; }
+        public string Password { get; }
 
         public User() {}
         public User(string userName, string password)
