@@ -31,6 +31,7 @@ namespace CringeProject.GUI {
             this.passwordTexbox = new System.Windows.Forms.TextBox();
             this.confirmedPasswordTextbox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.creationStatusLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // createUserButton
@@ -46,7 +47,7 @@ namespace CringeProject.GUI {
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(81, 107);
+            this.label1.Location = new System.Drawing.Point(80, 61);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 1;
@@ -55,7 +56,7 @@ namespace CringeProject.GUI {
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(81, 164);
+            this.label2.Location = new System.Drawing.Point(80, 118);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 2;
@@ -63,14 +64,14 @@ namespace CringeProject.GUI {
             // 
             // usernameTextbox
             // 
-            this.usernameTextbox.Location = new System.Drawing.Point(194, 104);
+            this.usernameTextbox.Location = new System.Drawing.Point(193, 58);
             this.usernameTextbox.Name = "usernameTextbox";
             this.usernameTextbox.Size = new System.Drawing.Size(247, 20);
             this.usernameTextbox.TabIndex = 3;
             // 
             // passwordTexbox
             // 
-            this.passwordTexbox.Location = new System.Drawing.Point(194, 161);
+            this.passwordTexbox.Location = new System.Drawing.Point(193, 115);
             this.passwordTexbox.Name = "passwordTexbox";
             this.passwordTexbox.Size = new System.Drawing.Size(247, 20);
             this.passwordTexbox.TabIndex = 4;
@@ -78,7 +79,7 @@ namespace CringeProject.GUI {
             // 
             // confirmedPasswordTextbox
             // 
-            this.confirmedPasswordTextbox.Location = new System.Drawing.Point(194, 213);
+            this.confirmedPasswordTextbox.Location = new System.Drawing.Point(193, 167);
             this.confirmedPasswordTextbox.Name = "confirmedPasswordTextbox";
             this.confirmedPasswordTextbox.Size = new System.Drawing.Size(247, 20);
             this.confirmedPasswordTextbox.TabIndex = 6;
@@ -87,17 +88,26 @@ namespace CringeProject.GUI {
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(81, 216);
+            this.label3.Location = new System.Drawing.Point(80, 170);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 13);
             this.label3.TabIndex = 5;
             this.label3.Text = "Confirm Password";
+            // 
+            // creationStatusLabel
+            // 
+            this.creationStatusLabel.AutoSize = true;
+            this.creationStatusLabel.Location = new System.Drawing.Point(171, 230);
+            this.creationStatusLabel.Name = "creationStatusLabel";
+            this.creationStatusLabel.Size = new System.Drawing.Size(0, 13);
+            this.creationStatusLabel.TabIndex = 7;
             // 
             // CreateUserWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(538, 344);
+            this.Controls.Add(this.creationStatusLabel);
             this.Controls.Add(this.confirmedPasswordTextbox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.passwordTexbox);
@@ -121,5 +131,6 @@ namespace CringeProject.GUI {
         private System.Windows.Forms.TextBox passwordTexbox;
         private System.Windows.Forms.TextBox confirmedPasswordTextbox;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label creationStatusLabel;
     }
 }

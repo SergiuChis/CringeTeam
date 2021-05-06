@@ -13,8 +13,10 @@ namespace CringeProject.GUI {
             InitializeComponent();
         }
 
-        private void createUserButton_Click(object sender, System.EventArgs e) {
-
+        private async void createUserButton_Click(object sender, System.EventArgs e) {
+            creationStatusLabel.Text = "Creating User";
+            var status = await _loginService.CreateUser(usernameTextbox.Text, passwordTexbox.Text, confirmedPasswordTextbox.Text);
+            creationStatusLabel.Text = status.Message;
         }
     }
 }

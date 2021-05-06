@@ -31,7 +31,7 @@ namespace CringeProject.Services.Login {
                 return new Status(e.Message, false);
             }
 
-            return new Status("", true);
+            return new Status("Success!", true);
         }
     }
 }
