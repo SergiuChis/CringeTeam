@@ -11,6 +11,18 @@ namespace CringeProject.Entities {
         public virtual List<Section> Sections { get; set; }
 
         public string Name { get; set; }
-        public DateTime SubmissionDeadline { get; set; }
+
+        public DateTime AbstractDeadline { get; set; }
+
+        public DateTime PaperDeadline { get; set; }
+
+        public DateTime StartDate { get; set; }
+
+        public DateTime EndDate { get; set; }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

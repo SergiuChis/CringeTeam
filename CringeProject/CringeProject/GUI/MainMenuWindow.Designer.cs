@@ -28,19 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.availableConferencesList = new System.Windows.Forms.ListView();
             this.label1 = new System.Windows.Forms.Label();
             this.createConference = new System.Windows.Forms.Button();
+            this.availableConferencesList = new System.Windows.Forms.ListBox();
+            this.viewSelectedConference = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // availableConferencesList
-            // 
-            this.availableConferencesList.HideSelection = false;
-            this.availableConferencesList.Location = new System.Drawing.Point(13, 73);
-            this.availableConferencesList.Name = "availableConferencesList";
-            this.availableConferencesList.Size = new System.Drawing.Size(603, 822);
-            this.availableConferencesList.TabIndex = 0;
-            this.availableConferencesList.UseCompatibleStateImageBehavior = false;
             // 
             // label1
             // 
@@ -59,16 +51,37 @@
             this.createConference.TabIndex = 2;
             this.createConference.Text = "Create conference";
             this.createConference.UseVisualStyleBackColor = true;
+            this.createConference.Click += new System.EventHandler(this.createConference_Click);
             // 
-            // BaseUserWindow
+            // availableConferencesList
+            // 
+            this.availableConferencesList.FormattingEnabled = true;
+            this.availableConferencesList.ItemHeight = 25;
+            this.availableConferencesList.Location = new System.Drawing.Point(12, 61);
+            this.availableConferencesList.Name = "availableConferencesList";
+            this.availableConferencesList.Size = new System.Drawing.Size(587, 829);
+            this.availableConferencesList.TabIndex = 3;
+            // 
+            // viewSelectedConference
+            // 
+            this.viewSelectedConference.Location = new System.Drawing.Point(801, 777);
+            this.viewSelectedConference.Name = "viewSelectedConference";
+            this.viewSelectedConference.Size = new System.Drawing.Size(255, 117);
+            this.viewSelectedConference.TabIndex = 4;
+            this.viewSelectedConference.Text = "View selected conference";
+            this.viewSelectedConference.UseVisualStyleBackColor = true;
+            this.viewSelectedConference.Click += new System.EventHandler(this.viewSelectedConference_Click);
+            // 
+            // MainMenuWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1367, 907);
+            this.Controls.Add(this.viewSelectedConference);
+            this.Controls.Add(this.availableConferencesList);
             this.Controls.Add(this.createConference);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.availableConferencesList);
-            this.Name = "BaseUserWindow";
+            this.Name = "MainMenuWindow";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.BaseUserWindow_Load);
             this.ResumeLayout(false);
@@ -77,9 +90,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ListView availableConferencesList;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button createConference;
+        private System.Windows.Forms.ListBox availableConferencesList;
+        private System.Windows.Forms.Button viewSelectedConference;
     }
 }

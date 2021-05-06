@@ -33,7 +33,7 @@ namespace CringeProject
                 .AddScoped<LoginWindow>()
                 .AddScoped<LoginService>()
                 .AddScoped<RepositoryContext>()
-                .AddScoped<BaseUserService>();
+                .AddScoped<MainMenuService>();
 
             ServiceProvider = services.BuildServiceProvider();
             //Structure: 

@@ -20,8 +20,14 @@ namespace CringeProject {
 
         public static MainMenuWindow CreateNewBaseUserWindow(User user)
         {
-            var baseUserService = (BaseUserService)Program.ServiceProvider.GetService(typeof(BaseUserService));
+            var baseUserService = (MainMenuService)Program.ServiceProvider.GetService(typeof(MainMenuService));
             return new MainMenuWindow(user, baseUserService);
+        }
+
+        public static CreateConferenceWindow CreateNewConferenceWindow(User user)
+        {
+            var mainMenuService = (MainMenuService)Program.ServiceProvider.GetService(typeof(MainMenuService));
+            return new CreateConferenceWindow(user, mainMenuService);
         }
     }
 }

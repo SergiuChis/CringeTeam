@@ -14,10 +14,10 @@ namespace CringeProject.GUI
 {
     public partial class MainMenuWindow : Form
     {
-        private BaseUserService _service;
+        private MainMenuService _service;
         private User _user;
 
-        public MainMenuWindow(User user, BaseUserService service)
+        public MainMenuWindow(User user, MainMenuService service)
         {
             _service = service;
             _user = user;
@@ -27,6 +27,16 @@ namespace CringeProject.GUI
         private void BaseUserWindow_Load(object sender, EventArgs e)
         {
             var conferences = _service.GetAllConferences();
+            availableConferencesList.DataSource = conferences;
+        }
+
+        private void createConference_Click(object sender, EventArgs e)
+        {
+            WindowCreationFactory.CreateNewConferenceWindow(_user).Show();
+        }
+
+        private void viewSelectedConference_Click(object sender, EventArgs e)
+        {
 
         }
     }
