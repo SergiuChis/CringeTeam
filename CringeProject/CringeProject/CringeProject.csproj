@@ -212,6 +212,10 @@
     <Compile Include="Migrations\202105062000489_changed-user-pk.designer.cs">
       <DependentUpon>202105062000489_changed-user-pk.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105062004478_changed-user-password.cs" />
+    <Compile Include="Migrations\202105062004478_changed-user-password.designer.cs">
+      <DependentUpon>202105062004478_changed-user-password.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -233,6 +237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105062000489_changed-user-pk.resx">
       <DependentUpon>202105062000489_changed-user-pk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105062004478_changed-user-password.resx">
+      <DependentUpon>202105062004478_changed-user-password.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
