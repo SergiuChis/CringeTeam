@@ -20,15 +20,15 @@ namespace CringeProject.Services.Login {
 
         public async Task<Status> CreateUser(string username, string password, string confirmedPassword) {
             if (password != confirmedPassword)
-                return new Status("Passwords don't match", false);
+                return new Status("Passwords don't match.", false);
 
             var _ = _repository.Users.Find(username) ?? _repository.Users.Add(new User(username, password));
 
             try {
                 await _repository.SaveChangesAsync();
             }
-            catch (Exception e) {
-                return new Status(e.Message, false);
+            catch (Exception) {
+                return new Status("Operation failed. Please try again later.", false);
             }
 
             return new Status("Success!", true);
