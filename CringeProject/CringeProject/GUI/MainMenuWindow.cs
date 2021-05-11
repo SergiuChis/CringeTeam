@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CringeProject.Entities.UserTypes;
 
 namespace CringeProject.GUI
 {
@@ -35,9 +36,17 @@ namespace CringeProject.GUI
             WindowCreationFactory.CreateNewConferenceWindow(_user).Show();
         }
 
-        private void viewSelectedConference_Click(object sender, EventArgs e)
-        {
+        private async void viewSelectedConference_Click(object sender, EventArgs e) {
+            var selected = (Conference)availableConferencesList.SelectedItem;
+            var participation = await _service.GetParticipationForConferenceAsync(_user.UserName, selected.Id);
 
+            switch (participation.UserType) {
+                case UserType.SteeringCommittee:
+                    WindowCreationFactory.CreateSteeringCommitteeWindow(participation).Show();
+                    return;
+                default:
+                    return;
+            }
         }
     }
 }

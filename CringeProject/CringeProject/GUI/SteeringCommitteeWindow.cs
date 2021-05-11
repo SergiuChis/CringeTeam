@@ -1,17 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using CringeProject.Entities;
 using CringeProject.Services;
 
 namespace CringeProject.GUI {
     public partial class SteeringCommitteeWindow : Form {
+        //TODO: for steering committee window, create a "Create sections for this conference" button.
         private readonly Participation _participation;
         private readonly SteeringCommitteeService _steeringCommitteeService;
 

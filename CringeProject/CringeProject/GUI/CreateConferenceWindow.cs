@@ -33,7 +33,7 @@ namespace CringeProject.GUI
             DateTime deadlineForPapers = deadlineForPapersBox.Value;
             // int numberOfSections = int.Parse(numberOfSectionsBox.Text);
 
-            await _service.AddConference(_user, conferenceName, startDate, endDate, deadlineForAbstracts, deadlineForPapers);
+            await _service.AddConferenceAsync(_user, conferenceName, startDate, endDate, deadlineForAbstracts, deadlineForPapers);
         }
 
         private void CreateConferenceWindow_Load(object sender, EventArgs e)

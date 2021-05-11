@@ -18,10 +18,10 @@ namespace CringeProject {
             return new CreateUserWindow(loginService);
         }
 
-        public static SteeringCommitteeWindow CreateSteeringCommitteeWindow()
+        public static SteeringCommitteeWindow CreateSteeringCommitteeWindow(Participation participation)
         {
             var steeringCommitteeService = (SteeringCommitteeService)Program.ServiceProvider.GetService(typeof(SteeringCommitteeService));
-            return new SteeringCommitteeWindow(steeringCommitteeService);
+            return new SteeringCommitteeWindow(participation, steeringCommitteeService);
         }
         
         public static MainMenuWindow CreateNewBaseUserWindow(User user)
