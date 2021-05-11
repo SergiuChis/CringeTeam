@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using CringeProject.GUI;
 using CringeProject.Services;
 using CringeProject.Services.Login;
+using CringeProject.Services;
 
 namespace CringeProject
 {
@@ -33,7 +34,8 @@ namespace CringeProject
                 .AddScoped<LoginWindow>()
                 .AddScoped<LoginService>()
                 .AddScoped<RepositoryContext>()
-                .AddScoped<SteeringCommitteeService>();
+                .AddScoped<SteeringCommitteeService>()
+                .AddScoped<MainMenuService>();
 
             ServiceProvider = services.BuildServiceProvider();
             //Structure: 

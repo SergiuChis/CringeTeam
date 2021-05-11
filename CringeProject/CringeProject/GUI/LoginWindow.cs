@@ -12,8 +12,10 @@ namespace CringeProject.GUI {
             InitializeComponent();
         }
 
-        private void createAccountButton_Click(object sender, EventArgs e) {
-            WindowCreationFactory.CreateNewUserAccountWindow().Show();
+        private void loginButton_Click(object sender, EventArgs e)
+        {
+            var user = _loginService.Authenticate(usernameTextbox.Text, passwordTextbox.Text);
+            WindowCreationFactory.CreateNewBaseUserWindow(user).Show();
         }
 
         private async void loginButton_Click_1(object sender, EventArgs e) {

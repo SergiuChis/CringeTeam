@@ -186,11 +186,23 @@
     <Compile Include="Entities\UserTypes\SessionChairType.cs" />
     <Compile Include="Entities\UserTypes\SteeringCommitteeMemberType.cs" />
     <Compile Include="Entities\UserTypes\UserType.cs" />
+    <Compile Include="GUI\CreateConferenceWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CreateConferenceWindow.Designer.cs">
+      <DependentUpon>CreateConferenceWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\CreateUserWindow.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\CreateUserWindow.Designer.cs">
       <DependentUpon>CreateUserWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MainMenuWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MainMenuWindow.Designer.cs">
+      <DependentUpon>MainMenuWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\LoginWindow.cs">
       <SubType>Form</SubType>
@@ -231,15 +243,29 @@
     <Compile Include="Migrations\202105062129254_change-participation-pk.cs" />
     <Compile Include="Migrations\202105062129254_change-participation-pk.designer.cs">
       <DependentUpon>202105062129254_change-participation-pk.cs</DependentUpon>
+    <Compile Include="Migrations\202105062122263_new-migration.cs" />
+    <Compile Include="Migrations\202105062122263_new-migration.designer.cs">
+      <DependentUpon>202105062122263_new-migration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105062220032_new-migration-2.cs" />
+    <Compile Include="Migrations\202105062220032_new-migration-2.designer.cs">
+      <DependentUpon>202105062220032_new-migration-2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\RepositoryContext.cs" />
     <Compile Include="Services\BaseUserService.cs" />
+    <Compile Include="Services\MainMenuService.cs" />
     <Compile Include="Services\Login\LoginService.cs" />
     <Compile Include="Services\SteeringCommitteeService.cs" />
     <Compile Include="WindowCreationFactory.cs" />
+    <EmbeddedResource Include="GUI\CreateConferenceWindow.resx">
+      <DependentUpon>CreateConferenceWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainMenuWindow.resx">
+      <DependentUpon>MainMenuWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\CreateUserWindow.resx">
       <DependentUpon>CreateUserWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -263,6 +289,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105062129254_change-participation-pk.resx">
       <DependentUpon>202105062129254_change-participation-pk.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105062122263_new-migration.resx">
+      <DependentUpon>202105062122263_new-migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105062220032_new-migration-2.resx">
+      <DependentUpon>202105062220032_new-migration-2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -274,6 +305,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\CringeProject.Entities.Section.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

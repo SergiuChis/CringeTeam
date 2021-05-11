@@ -1,4 +1,5 @@
-﻿using CringeProject.GUI;
+using CringeProject.Entities;
+using CringeProject.GUI;
 using CringeProject.Services;
 using CringeProject.Services.Login;
 
@@ -21,6 +22,18 @@ namespace CringeProject {
         {
             var steeringCommitteeService = (SteeringCommitteeService)Program.ServiceProvider.GetService(typeof(SteeringCommitteeService));
             return new SteeringCommitteeWindow(steeringCommitteeService);
+        }
+        
+        public static MainMenuWindow CreateNewBaseUserWindow(User user)
+        {
+            var baseUserService = (MainMenuService)Program.ServiceProvider.GetService(typeof(MainMenuService));
+            return new MainMenuWindow(user, baseUserService);
+        }
+
+        public static CreateConferenceWindow CreateNewConferenceWindow(User user)
+        {
+            var mainMenuService = (MainMenuService)Program.ServiceProvider.GetService(typeof(MainMenuService));
+            return new CreateConferenceWindow(user, mainMenuService);
         }
     }
 }
