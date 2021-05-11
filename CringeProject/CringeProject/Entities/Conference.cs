@@ -20,6 +20,11 @@ namespace CringeProject.Entities {
 
         public DateTime EndDate { get; set; }
 
+        public Conference()
+        {
+            
+        }
+
         public override string ToString()
         {
             return Name;

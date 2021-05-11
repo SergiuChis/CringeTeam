@@ -7,9 +7,8 @@ namespace CringeProject.Entities {
         public int Id { get; set; }
         
         //public virtual ICollection<Paper> Papers { get; set; }
-
+        
         public int ConferenceId { get; set; }
-        public Conference Conference { get; set; }
 
         public string Room { get; set; }
         public int AvailablePlaces { get; set; } //number of seats or smth

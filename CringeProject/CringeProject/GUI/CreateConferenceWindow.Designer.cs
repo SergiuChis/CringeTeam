@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.conferenceNameBox = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,9 +39,9 @@
             this.startDateBox = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.endDateBox = new System.Windows.Forms.DateTimePicker();
-            this.numberOfSectionsBox = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.addConference = new System.Windows.Forms.Button();
+            this.sectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.sectionBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -124,25 +125,9 @@
             this.endDateBox.Size = new System.Drawing.Size(417, 31);
             this.endDateBox.TabIndex = 9;
             // 
-            // numberOfSectionsBox
-            // 
-            this.numberOfSectionsBox.Location = new System.Drawing.Point(274, 433);
-            this.numberOfSectionsBox.Name = "numberOfSectionsBox";
-            this.numberOfSectionsBox.Size = new System.Drawing.Size(100, 31);
-            this.numberOfSectionsBox.TabIndex = 10;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(18, 433);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(197, 25);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Number of sections";
-            // 
             // addConference
             // 
-            this.addConference.Location = new System.Drawing.Point(180, 541);
+            this.addConference.Location = new System.Drawing.Point(130, 447);
             this.addConference.Name = "addConference";
             this.addConference.Size = new System.Drawing.Size(428, 99);
             this.addConference.TabIndex = 12;
@@ -150,14 +135,16 @@
             this.addConference.UseVisualStyleBackColor = true;
             this.addConference.Click += new System.EventHandler(this.addConference_Click);
             // 
+            // sectionBindingSource
+            // 
+            this.sectionBindingSource.DataSource = typeof(CringeProject.Entities.Section);
+            // 
             // CreateConferenceWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 692);
+            this.ClientSize = new System.Drawing.Size(707, 579);
             this.Controls.Add(this.addConference);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.numberOfSectionsBox);
             this.Controls.Add(this.endDateBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.startDateBox);
@@ -170,6 +157,8 @@
             this.Controls.Add(this.label1);
             this.Name = "CreateConferenceWindow";
             this.Text = "CreateConferenceWindow";
+            this.Load += new System.EventHandler(this.CreateConferenceWindow_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.sectionBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -187,8 +176,7 @@
         private System.Windows.Forms.DateTimePicker startDateBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker endDateBox;
-        private System.Windows.Forms.TextBox numberOfSectionsBox;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button addConference;
+        private System.Windows.Forms.BindingSource sectionBindingSource;
     }
 }

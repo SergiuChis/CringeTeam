@@ -22,11 +22,13 @@ namespace CringeProject.Services {
             return _repository.Conferences.ToList();
         }
 
-        public async Task<Status> AddConference(User creatingUser, string conferenceName, DateTime startDate, DateTime endDate, DateTime deadlineForAbstracts, DateTime deadlineForPapers, int numberOfSections)
+        public async Task<Status> AddConference(User creatingUser, string conferenceName, DateTime startDate, DateTime endDate, DateTime deadlineForAbstracts, DateTime deadlineForPapers)
         {
             Conference newConference = new Conference { Name = conferenceName, StartDate = startDate, EndDate = endDate, AbstractDeadline = deadlineForAbstracts, PaperDeadline = deadlineForPapers };
-            _repository.Conferences.Add(newConference);
-            _repository.Participations.Add(new Participation { SectionId = 1, UserName = creatingUser.UserName, UserType = new SteeringCommitteeMemberType().Type });
+            var addedConference = _repository.Conferences.Add(newConference);
+            var newSection = new Section { ConferenceId = addedConference.Id, Room = "AdminRoom", AvailablePlaces = 1 };
+            var addedSection = _repository.Sections.Add(newSection);
+            _repository.Participations.Add(new Participation { SectionId = addedSection.Id, UserName = creatingUser.UserName, UserType = new SteeringCommitteeMemberType().Type });
             try
             {
                 // TODO change participations to confrenences rather than sections sau ceva de genu
