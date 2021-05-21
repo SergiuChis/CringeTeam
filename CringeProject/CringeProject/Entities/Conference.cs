@@ -20,6 +20,8 @@ namespace CringeProject.Entities {
 
         public DateTime EndDate { get; set; }
 
+        //TODO: Add conference description, (images), organizer name 
+
         public Conference()
         {
             

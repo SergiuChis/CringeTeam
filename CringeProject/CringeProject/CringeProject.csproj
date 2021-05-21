@@ -205,6 +205,12 @@
     <Compile Include="GUI\LoginWindow.Designer.cs">
       <DependentUpon>LoginWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ReviewerWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ReviewerWindow.Designer.cs">
+      <DependentUpon>ReviewerWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\SteeringCommitteeWindow.cs">
       <SubType>Form</SubType>
     </Compile>

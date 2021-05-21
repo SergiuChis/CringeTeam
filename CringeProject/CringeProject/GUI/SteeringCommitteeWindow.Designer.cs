@@ -31,12 +31,18 @@ namespace CringeProject.GUI {
             this.updateConferenceButton = new System.Windows.Forms.Button();
             this.usernameLabel = new System.Windows.Forms.Label();
             this.roleLabel = new System.Windows.Forms.Label();
+            this.addSectionButton = new System.Windows.Forms.Button();
+            this.confirmAddSectionButton = new System.Windows.Forms.Button();
+            this.roomLabel = new System.Windows.Forms.Label();
+            this.availablePlacesLabel = new System.Windows.Forms.Label();
+            this.roomTextBox = new System.Windows.Forms.TextBox();
+            this.availablePlacesTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(335, 92);
+            this.label1.Location = new System.Drawing.Point(325, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 1;
@@ -45,7 +51,7 @@ namespace CringeProject.GUI {
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(346, 156);
+            this.label2.Location = new System.Drawing.Point(336, 104);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(32, 13);
             this.label2.TabIndex = 2;
@@ -95,11 +101,69 @@ namespace CringeProject.GUI {
             this.roleLabel.Size = new System.Drawing.Size(0, 13);
             this.roleLabel.TabIndex = 7;
             // 
+            // addSectionButton
+            // 
+            this.addSectionButton.Location = new System.Drawing.Point(502, 262);
+            this.addSectionButton.Name = "addSectionButton";
+            this.addSectionButton.Size = new System.Drawing.Size(163, 45);
+            this.addSectionButton.TabIndex = 8;
+            this.addSectionButton.Text = "Add Section";
+            this.addSectionButton.UseVisualStyleBackColor = true;
+            this.addSectionButton.Click += new System.EventHandler(this.addSectionButton_Click);
+            // 
+            // confirmAddSectionButton
+            // 
+            this.confirmAddSectionButton.Location = new System.Drawing.Point(502, 262);
+            this.confirmAddSectionButton.Name = "confirmAddSectionButton";
+            this.confirmAddSectionButton.Size = new System.Drawing.Size(163, 45);
+            this.confirmAddSectionButton.TabIndex = 9;
+            this.confirmAddSectionButton.Text = "Confirm";
+            this.confirmAddSectionButton.UseVisualStyleBackColor = true;
+            this.confirmAddSectionButton.Click += new System.EventHandler(this.confirmAddSectionButton_Click);
+            // 
+            // roomLabel
+            // 
+            this.roomLabel.AutoSize = true;
+            this.roomLabel.Location = new System.Drawing.Point(328, 194);
+            this.roomLabel.Name = "roomLabel";
+            this.roomLabel.Size = new System.Drawing.Size(38, 13);
+            this.roomLabel.TabIndex = 10;
+            this.roomLabel.Text = "Room:";
+            // 
+            // availablePlacesLabel
+            // 
+            this.availablePlacesLabel.AutoSize = true;
+            this.availablePlacesLabel.Location = new System.Drawing.Point(328, 231);
+            this.availablePlacesLabel.Name = "availablePlacesLabel";
+            this.availablePlacesLabel.Size = new System.Drawing.Size(88, 13);
+            this.availablePlacesLabel.TabIndex = 11;
+            this.availablePlacesLabel.Text = "Available Places:";
+            // 
+            // roomTextBox
+            // 
+            this.roomTextBox.Location = new System.Drawing.Point(427, 194);
+            this.roomTextBox.Name = "roomTextBox";
+            this.roomTextBox.Size = new System.Drawing.Size(186, 20);
+            this.roomTextBox.TabIndex = 12;
+            // 
+            // availablePlacesTextBox
+            // 
+            this.availablePlacesTextBox.Location = new System.Drawing.Point(427, 228);
+            this.availablePlacesTextBox.Name = "availablePlacesTextBox";
+            this.availablePlacesTextBox.Size = new System.Drawing.Size(186, 20);
+            this.availablePlacesTextBox.TabIndex = 13;
+            // 
             // SteeringCommitteeWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(691, 406);
+            this.Controls.Add(this.availablePlacesTextBox);
+            this.Controls.Add(this.roomTextBox);
+            this.Controls.Add(this.availablePlacesLabel);
+            this.Controls.Add(this.roomLabel);
+            this.Controls.Add(this.confirmAddSectionButton);
+            this.Controls.Add(this.addSectionButton);
             this.Controls.Add(this.roleLabel);
             this.Controls.Add(this.usernameLabel);
             this.Controls.Add(this.updateConferenceButton);
@@ -109,6 +173,7 @@ namespace CringeProject.GUI {
             this.Controls.Add(this.label1);
             this.Name = "SteeringCommitteeWindow";
             this.Text = "SteeringCommitteeWindow";
+            this.Load += new System.EventHandler(this.SteeringCommitteeWindow_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,5 +188,11 @@ namespace CringeProject.GUI {
         private System.Windows.Forms.Button updateConferenceButton;
         private System.Windows.Forms.Label usernameLabel;
         private System.Windows.Forms.Label roleLabel;
+        private System.Windows.Forms.Button addSectionButton;
+        private System.Windows.Forms.Button confirmAddSectionButton;
+        private System.Windows.Forms.Label roomLabel;
+        private System.Windows.Forms.Label availablePlacesLabel;
+        private System.Windows.Forms.TextBox roomTextBox;
+        private System.Windows.Forms.TextBox availablePlacesTextBox;
     }
 }
