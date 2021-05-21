@@ -13,5 +13,7 @@ namespace CringeProject.Entities {
         public Section Section { get; set; }
 
         public string UserType { get; set; }
+
+        public bool IsSectionChair { get; set; }
     }
 }

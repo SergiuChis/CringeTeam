@@ -219,33 +219,13 @@
     </Compile>
     <Compile Include="Messages\ReviewStatus.cs" />
     <Compile Include="Messages\Status.cs" />
-    <Compile Include="Migrations\202105042149199_sergiu-migration.cs" />
-    <Compile Include="Migrations\202105042149199_sergiu-migration.designer.cs">
-      <DependentUpon>202105042149199_sergiu-migration.cs</DependentUpon>
+    <Compile Include="Migrations\202105212027159_omleta.cs" />
+    <Compile Include="Migrations\202105212027159_omleta.designer.cs">
+      <DependentUpon>202105212027159_omleta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202105042151436_cirto-migration.cs" />
-    <Compile Include="Migrations\202105042151436_cirto-migration.designer.cs">
-      <DependentUpon>202105042151436_cirto-migration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105062000489_changed-user-pk.cs" />
-    <Compile Include="Migrations\202105062000489_changed-user-pk.designer.cs">
-      <DependentUpon>202105062000489_changed-user-pk.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105062004478_changed-user-password.cs" />
-    <Compile Include="Migrations\202105062004478_changed-user-password.designer.cs">
-      <DependentUpon>202105062004478_changed-user-password.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105062129254_change-participation-pk.cs" />
-    <Compile Include="Migrations\202105062129254_change-participation-pk.designer.cs">
-      <DependentUpon>202105062129254_change-participation-pk.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105062122263_new-migration.cs" />
-    <Compile Include="Migrations\202105062122263_new-migration.designer.cs">
-      <DependentUpon>202105062122263_new-migration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105062220032_new-migration-2.cs" />
-    <Compile Include="Migrations\202105062220032_new-migration-2.designer.cs">
-      <DependentUpon>202105062220032_new-migration-2.cs</DependentUpon>
+    <Compile Include="Migrations\202105212029272_cotlet.cs" />
+    <Compile Include="Migrations\202105212029272_cotlet.designer.cs">
+      <DependentUpon>202105212029272_cotlet.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
@@ -271,26 +251,11 @@
     <EmbeddedResource Include="GUI\SteeringCommitteeWindow.resx">
       <DependentUpon>SteeringCommitteeWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105042149199_sergiu-migration.resx">
-      <DependentUpon>202105042149199_sergiu-migration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105212027159_omleta.resx">
+      <DependentUpon>202105212027159_omleta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105042151436_cirto-migration.resx">
-      <DependentUpon>202105042151436_cirto-migration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105062000489_changed-user-pk.resx">
-      <DependentUpon>202105062000489_changed-user-pk.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105062004478_changed-user-password.resx">
-      <DependentUpon>202105062004478_changed-user-password.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105062129254_change-participation-pk.resx">
-      <DependentUpon>202105062129254_change-participation-pk.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105062122263_new-migration.resx">
-      <DependentUpon>202105062122263_new-migration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105062220032_new-migration-2.resx">
-      <DependentUpon>202105062220032_new-migration-2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105212029272_cotlet.resx">
+      <DependentUpon>202105212029272_cotlet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

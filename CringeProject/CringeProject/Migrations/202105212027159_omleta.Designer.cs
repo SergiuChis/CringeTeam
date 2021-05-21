@@ -7,13 +7,13 @@ namespace CringeProject.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class changeduserpassword : IMigrationMetadata
+    public sealed partial class omleta : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(changeduserpassword));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(omleta));
         
         string IMigrationMetadata.Id
         {
-            get { return "202105062004478_changed-user-password"; }
+            get { return "202105212027159_omleta"; }
         }
         
         string IMigrationMetadata.Source

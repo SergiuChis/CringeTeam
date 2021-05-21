@@ -7,13 +7,13 @@ namespace CringeProject.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class sergiumigration : IMigrationMetadata
+    public sealed partial class cotlet : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(sergiumigration));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(cotlet));
         
         string IMigrationMetadata.Id
         {
-            get { return "202105042149199_sergiu-migration"; }
+            get { return "202105212029272_cotlet"; }
         }
         
         string IMigrationMetadata.Source
