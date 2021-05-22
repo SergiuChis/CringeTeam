@@ -19,14 +19,14 @@ namespace CringeProject.Services
 
         public string GetRoomName(Participation participation)
         {
-            var roomName = _repository.Sections.Where(s => s.Id == participation.SectionId).Select(s => s.Room);
-            return roomName.GetEnumerator().Current;
+            var roomName = _repository.Sections.Where(s => s.Id == participation.SectionId).Select(s => s.Room).ToList();
+            return roomName[0];
         }
 
         public int GetAvailablePlaces(Participation participation)
         {
-            var availablePlaces = _repository.Sections.Where(s => s.Id == participation.SectionId).Select(s => s.AvailablePlaces);
-            return availablePlaces.GetEnumerator().Current;
+            var availablePlaces = _repository.Sections.Where(s => s.Id == participation.SectionId).Select(s => s.AvailablePlaces).ToList();
+            return availablePlaces[0];
         }
     }
 }
