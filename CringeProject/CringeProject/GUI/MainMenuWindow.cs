@@ -2,12 +2,7 @@
 using CringeProject.Services;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using CringeProject.Entities.UserTypes;
 
@@ -15,8 +10,8 @@ namespace CringeProject.GUI
 {
     public partial class MainMenuWindow : Form
     {
-        private MainMenuService _service;
-        private User _user;
+        private readonly MainMenuService _service;
+        private readonly User _user;
 
         public MainMenuWindow(User user, MainMenuService service)
         {
@@ -27,26 +22,46 @@ namespace CringeProject.GUI
 
         private void BaseUserWindow_Load(object sender, EventArgs e)
         {
-            var conferences = _service.GetAllConferences();
-            availableConferencesList.DataSource = conferences;
+            var sections = _service.GetAllSections();
+            var conferences = _service.GetConferencesForUser(_user);
+            availableConferencesList.DataSource = sections;
+            conferencesWithParticipationsList.DataSource = conferences;
         }
 
         private void createConference_Click(object sender, EventArgs e)
         {
             WindowCreationFactory.CreateNewConferenceWindow(_user).Show();
+            conferencesWithParticipationsList.Refresh();
         }
 
         private async void viewSelectedConference_Click(object sender, EventArgs e) {
-            var selected = (Conference)availableConferencesList.SelectedItem;
+            var selected = (Conference)conferencesWithParticipationsList.SelectedItem;
             var participation = await _service.GetParticipationForConferenceAsync(_user.UserName, selected.Id);
 
             switch (participation.UserType) {
                 case UserType.SteeringCommittee:
                     WindowCreationFactory.CreateSteeringCommitteeWindow(participation).Show();
                     return;
+                case UserType.Listener:
+                    WindowCreationFactory.CreateNewListenerWindow(participation).Show();
+                    return;
                 default:
                     return;
             }
+        }
+
+        private async void participateInConferenceButton_Click(object sender, EventArgs e) {
+            var selected = (Section) availableConferencesList.SelectedItem;
+
+            var status = await _service.AddParticipationAsync(_user, selected);
+
+            conferencesWithParticipationsList.DataSource = null;
+            var conferences = _service.GetConferencesForUser(_user);
+            conferencesWithParticipationsList.DataSource = conferences;
+
+            conferencesWithParticipationsList.Refresh();
+
+            errorsLabel.Text = status.Message;
         }
     }
 }
