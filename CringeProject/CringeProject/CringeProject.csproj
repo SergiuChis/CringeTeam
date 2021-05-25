@@ -235,12 +235,6 @@
     <Compile Include="GUI\SubmitAbstractWindow.Designer.cs">
       <DependentUpon>SubmitAbstractWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\UpdateConferenceDetailsWindow.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\UpdateConferenceDetailsWindow.Designer.cs">
-      <DependentUpon>UpdateConferenceDetailsWindow.cs</DependentUpon>
-    </Compile>
     <Compile Include="Messages\ReviewStatus.cs" />
     <Compile Include="Messages\Status.cs" />
     <Compile Include="Migrations\202105212027159_omleta.cs" />
@@ -262,6 +256,10 @@
     <Compile Include="Migrations\202105252111590_chanfes.cs" />
     <Compile Include="Migrations\202105252111590_chanfes.designer.cs">
       <DependentUpon>202105252111590_chanfes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105252245292_test.cs" />
+    <Compile Include="Migrations\202105252245292_test.designer.cs">
+      <DependentUpon>202105252245292_test.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
@@ -312,6 +310,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105252111590_chanfes.resx">
       <DependentUpon>202105252111590_chanfes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105252245292_test.resx">
+      <DependentUpon>202105252245292_test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
