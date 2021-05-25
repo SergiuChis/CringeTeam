@@ -223,12 +223,6 @@
     <Compile Include="GUI\SteeringCommitteeWindow.Designer.cs">
       <DependentUpon>SteeringCommitteeWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\UpdateConferenceDetails.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\UpdateConferenceDetails.Designer.cs">
-      <DependentUpon>UpdateConferenceDetails.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\UpdateConferenceDetailsWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -281,8 +275,8 @@
     <EmbeddedResource Include="GUI\SteeringCommitteeWindow.resx">
       <DependentUpon>SteeringCommitteeWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\UpdateConferenceDetails.resx">
-      <DependentUpon>UpdateConferenceDetails.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\UpdateConferenceDetailsWindow.resx">
+      <DependentUpon>UpdateConferenceDetailsWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105212027159_omleta.resx">
       <DependentUpon>202105212027159_omleta.cs</DependentUpon>

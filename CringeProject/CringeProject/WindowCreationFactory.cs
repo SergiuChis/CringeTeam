@@ -43,10 +43,10 @@ namespace CringeProject {
             return new ListenerWindow(participation, listenerService);
         }
 
-        public static UpdateConferenceDetails CreateUpdateConferenceDetailsWindow(int confID, User user, MainMenuWindow parent)
+        public static UpdateConferenceDetailsWindow CreateUpdateConferenceDetailsWindow(int confID, User user, MainMenuWindow parent)
         {
             var service = (MainMenuService)Program.ServiceProvider.GetService(typeof(MainMenuService));
-            return new UpdateConferenceDetails(confID, user, service, parent);
+            return new UpdateConferenceDetailsWindow(confID, user, service, parent);
         }
     }
 }
