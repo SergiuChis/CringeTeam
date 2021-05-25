@@ -43,7 +43,7 @@ namespace CringeProject.GUI
                     WindowCreationFactory.CreateSteeringCommitteeWindow(participation).Show();
                     return;
                 case UserType.Listener:
-                    WindowCreationFactory.CreateNewListenerWindow(participation).Show();
+                    WindowCreationFactory.CreateNewListenerWindow(_user, participation).Show();
                     return;
                 default:
                     return;

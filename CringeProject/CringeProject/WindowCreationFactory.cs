@@ -36,10 +36,22 @@ namespace CringeProject {
             return new CreateConferenceWindow(user, mainMenuService);
         }
 
-        public static ListenerWindow CreateNewListenerWindow(Participation participation)
+        public static ListenerWindow CreateNewListenerWindow(User user, Participation participation)
         {
             var listenerService = (ListenerService)Program.ServiceProvider.GetService(typeof(ListenerService));
-            return new ListenerWindow(participation, listenerService);
+            return new ListenerWindow(user, participation, listenerService);
+        }
+
+        public static AddFullPaperWindow CreateAddPaperWindow(Paper paper)
+        {
+            var paperManagementService = (PaperManagementService)Program.ServiceProvider.GetService(typeof(PaperManagementService));
+            return new AddFullPaperWindow(paper, paperManagementService);
+        }
+
+        public static SubmitAbstractWindow CreateSubmitAbstractWindow(User user, Participation participation)
+        {
+            var paperManagementService = (PaperManagementService)Program.ServiceProvider.GetService(typeof(PaperManagementService));
+            return new SubmitAbstractWindow(user, participation, paperManagementService);
         }
     }
 }

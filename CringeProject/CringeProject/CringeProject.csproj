@@ -181,6 +181,12 @@
     <Compile Include="Entities\Section.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Entities\UserTypes\UserType.cs" />
+    <Compile Include="GUI\AddFullPaperWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AddFullPaperWindow.Designer.cs">
+      <DependentUpon>AddFullPaperWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\CreateConferenceWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,6 +229,12 @@
     <Compile Include="GUI\SteeringCommitteeWindow.Designer.cs">
       <DependentUpon>SteeringCommitteeWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\SubmitAbstractWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\SubmitAbstractWindow.Designer.cs">
+      <DependentUpon>SubmitAbstractWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\UpdateConferenceDetailsWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -247,6 +259,10 @@
     <Compile Include="Migrations\202105231815162_sections-modifications-2.designer.cs">
       <DependentUpon>202105231815162_sections-modifications-2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105252111590_chanfes.cs" />
+    <Compile Include="Migrations\202105252111590_chanfes.designer.cs">
+      <DependentUpon>202105252111590_chanfes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -255,8 +271,12 @@
     <Compile Include="Services\ListenerService.cs" />
     <Compile Include="Services\MainMenuService.cs" />
     <Compile Include="Services\Login\LoginService.cs" />
+    <Compile Include="Services\PaperManagementService.cs" />
     <Compile Include="Services\SteeringCommitteeService.cs" />
     <Compile Include="WindowCreationFactory.cs" />
+    <EmbeddedResource Include="GUI\AddFullPaperWindow.resx">
+      <DependentUpon>AddFullPaperWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\CreateConferenceWindow.resx">
       <DependentUpon>CreateConferenceWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -275,6 +295,9 @@
     <EmbeddedResource Include="GUI\SteeringCommitteeWindow.resx">
       <DependentUpon>SteeringCommitteeWindow.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SubmitAbstractWindow.resx">
+      <DependentUpon>SubmitAbstractWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105212027159_omleta.resx">
       <DependentUpon>202105212027159_omleta.cs</DependentUpon>
     </EmbeddedResource>
@@ -286,6 +309,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105231815162_sections-modifications-2.resx">
       <DependentUpon>202105231815162_sections-modifications-2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105252111590_chanfes.resx">
+      <DependentUpon>202105252111590_chanfes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

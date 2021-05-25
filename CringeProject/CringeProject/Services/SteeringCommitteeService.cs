@@ -9,10 +9,7 @@ using CringeProject.Repository;
 
 namespace CringeProject.Services {
     public class SteeringCommitteeService : BaseUserService {
-        private readonly RepositoryContext _repository;
-        public SteeringCommitteeService(RepositoryContext repository) {
-            _repository = repository;
-        }
+        public SteeringCommitteeService(RepositoryContext repository) : base(repository) { }
 
         public async Task<Status> UpdateUserRole(Participation participation, string newRole) {
             var existingUser = _repository.Users.FirstOrDefault(u => u.UserName == participation.UserName);

@@ -8,14 +8,9 @@ using System.Threading.Tasks;
 
 namespace CringeProject.Services
 {
-    public class ListenerService
+    public class ListenerService : BaseUserService
     {
-        private readonly RepositoryContext _repository;
-
-        public ListenerService(RepositoryContext repositoryContext)
-        {
-            _repository = repositoryContext;
-        }
+        public ListenerService(RepositoryContext repositoryContext) : base(repositoryContext) { }
 
         public string GetRoomName(Participation participation)
         {
