@@ -239,6 +239,14 @@
     <Compile Include="Migrations\202105212029272_cotlet.designer.cs">
       <DependentUpon>202105212029272_cotlet.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105231813359_sections-modifications.cs" />
+    <Compile Include="Migrations\202105231813359_sections-modifications.designer.cs">
+      <DependentUpon>202105231813359_sections-modifications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105231815162_sections-modifications-2.cs" />
+    <Compile Include="Migrations\202105231815162_sections-modifications-2.designer.cs">
+      <DependentUpon>202105231815162_sections-modifications-2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -272,6 +280,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105212029272_cotlet.resx">
       <DependentUpon>202105212029272_cotlet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105231813359_sections-modifications.resx">
+      <DependentUpon>202105231813359_sections-modifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105231815162_sections-modifications-2.resx">
+      <DependentUpon>202105231815162_sections-modifications-2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
