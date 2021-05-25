@@ -302,6 +302,9 @@
     <EmbeddedResource Include="GUI\SubmitAbstractWindow.resx">
       <DependentUpon>SubmitAbstractWindow.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UpdateConferenceDetailsWindow.resx">
+      <DependentUpon>UpdateConferenceDetailsWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105212027159_omleta.resx">
       <DependentUpon>202105212027159_omleta.cs</DependentUpon>
     </EmbeddedResource>

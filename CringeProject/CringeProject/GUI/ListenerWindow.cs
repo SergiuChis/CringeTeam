@@ -31,6 +31,7 @@ namespace CringeProject.GUI
             roomNameLabel.Text = _service.GetRoomName(_participation);
             availablePlacesNumberLabel.Text = _service.GetAvailablePlaces(_participation).ToString();
 
+            //TODO: fix papers not appearing in the list bug.
             var papers = await _service.GetPapersForUser(_user);
             myPapersListBox.DataSource = papers.ToList();
         }
