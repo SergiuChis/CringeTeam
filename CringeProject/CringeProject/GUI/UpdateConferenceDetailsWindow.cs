@@ -12,37 +12,33 @@ using System.Windows.Forms;
 
 namespace CringeProject.GUI
 {
-    public partial class CreateConferenceWindow : Form
+    public partial class UpdateConferenceDetailsWindow : Form
     {
+        private int _conferenceID;
         private MainMenuService _service;
         private User _user;
         private MainMenuWindow _parent;
 
-        public CreateConferenceWindow(User user, MainMenuService service, MainMenuWindow parent)
+        public UpdateConferenceDetailsWindow(int conferenceID, User user, MainMenuService service, MainMenuWindow parent)
         {
             _service = service;
             _user = user;
             _parent = parent;
+            _conferenceID = conferenceID;
             InitializeComponent();
         }
 
-        private async void addConference_Click(object sender, EventArgs e)
+        private async void updateConference_Click(object sender, EventArgs e)
         {
             string conferenceName = conferenceNameBox.Text;
             DateTime startDate = startDateBox.Value;
             DateTime endDate = endDateBox.Value;
             DateTime deadlineForAbstracts = deadlineForAbstractsBox.Value;
             DateTime deadlineForPapers = deadlineForPapersBox.Value;
-            // int numberOfSections = int.Parse(numberOfSectionsBox.Text);
 
-            await _service.AddConferenceAsync(_user, conferenceName, startDate, endDate, deadlineForAbstracts, deadlineForPapers);
-            
+            await _service.UpdateConferenceAsync(_conferenceID, conferenceName, startDate, endDate, deadlineForAbstracts, deadlineForPapers);
+
             _parent.RefreshLists();
-        }
-
-        private void CreateConferenceWindow_Load(object sender, EventArgs e)
-        {
-            
         }
     }
 }

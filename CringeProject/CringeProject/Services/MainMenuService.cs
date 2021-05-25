@@ -54,12 +54,38 @@ namespace CringeProject.Services {
             }
         }
 
+        public async Task<Status> UpdateConferenceAsync(int conferenceID, string conferenceName, DateTime startDate, DateTime endDate, DateTime deadlineForAbstracts, DateTime deadlineForPapers)
+        {
+            var conference = _repository.Conferences.SingleOrDefault(conf => conf.Id == conferenceID);
+            conference.Name = conferenceName;
+            conference.StartDate = startDate;
+            conference.EndDate = endDate;
+            conference.AbstractDeadline = deadlineForAbstracts;
+            conference.PaperDeadline = deadlineForPapers;
+
+            try
+            {
+                await _repository.SaveChangesAsync();
+                return new Status("Success", true);
+            }
+            catch (Exception e)
+            {
+                return new Status("Failed to update conference", false);
+            }
+        }
+
         public async Task<Status> AddParticipationAsync(User user, Section section) {
             var participation = new Participation {
                 UserName = user.UserName, 
                 UserType = UserType.Listener, 
                 SectionId = section.Id
             };
+
+            var searchForDuplicateParticipation = _repository.Participations.Where(p => p.UserName == participation.UserName).ToList();
+            if (searchForDuplicateParticipation.Count != 0)
+            {
+                return new Status("Participation already exists", false);
+            }
 
             _repository.Participations.Add(participation);
 
