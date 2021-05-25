@@ -20,6 +20,21 @@ namespace CringeProject.GUI
             InitializeComponent();
         }
 
+        public void RefreshLists()
+        {
+            conferencesWithParticipationsList.DataSource = null;
+            var conferences = _service.GetConferencesForUser(_user);
+            conferencesWithParticipationsList.DataSource = conferences;
+
+            conferencesWithParticipationsList.Refresh();
+
+            availableConferencesList.DataSource = null;
+            var all_sections = _service.GetAllSections();
+            availableConferencesList.DataSource = all_sections;
+
+            availableConferencesList.Refresh();
+        }
+
         private void BaseUserWindow_Load(object sender, EventArgs e)
         {
             var sections = _service.GetAllSections();
@@ -30,7 +45,7 @@ namespace CringeProject.GUI
 
         private void createConference_Click(object sender, EventArgs e)
         {
-            WindowCreationFactory.CreateNewConferenceWindow(_user).Show();
+            WindowCreationFactory.CreateNewConferenceWindow(_user, this).Show();
             conferencesWithParticipationsList.Refresh();
         }
 
