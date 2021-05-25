@@ -42,5 +42,11 @@ namespace CringeProject {
             var listenerService = (ListenerService)Program.ServiceProvider.GetService(typeof(ListenerService));
             return new ListenerWindow(participation, listenerService);
         }
+
+        public static UpdateConferenceDetails CreateUpdateConferenceDetailsWindow(int confID, User user, MainMenuWindow parent)
+        {
+            var service = (MainMenuService)Program.ServiceProvider.GetService(typeof(MainMenuService));
+            return new UpdateConferenceDetails(confID, user, service, parent);
+        }
     }
 }

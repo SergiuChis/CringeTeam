@@ -78,5 +78,11 @@ namespace CringeProject.GUI
 
             errorsLabel.Text = status.Message;
         }
+
+        private void updateSelectedConference_Click(object sender, EventArgs e)
+        {
+            var selected = (Conference)conferencesWithParticipationsList.SelectedItem;
+            WindowCreationFactory.CreateUpdateConferenceDetailsWindow(selected.Id, _user, this).Show();
+        }
     }
 }
