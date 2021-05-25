@@ -2,6 +2,7 @@ using CringeProject.Entities;
 using CringeProject.GUI;
 using CringeProject.Services;
 using CringeProject.Services.Login;
+using System.Windows.Forms;
 
 namespace CringeProject {
     public static class WindowCreationFactory
@@ -30,10 +31,10 @@ namespace CringeProject {
             return new MainMenuWindow(user, baseUserService);
         }
 
-        public static CreateConferenceWindow CreateNewConferenceWindow(User user)
+        public static CreateConferenceWindow CreateNewConferenceWindow(User user, MainMenuWindow parent)
         {
             var mainMenuService = (MainMenuService)Program.ServiceProvider.GetService(typeof(MainMenuService));
-            return new CreateConferenceWindow(user, mainMenuService);
+            return new CreateConferenceWindow(user, mainMenuService, parent);
         }
 
         public static ListenerWindow CreateNewListenerWindow(Participation participation)

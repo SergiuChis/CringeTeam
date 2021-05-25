@@ -16,11 +16,13 @@ namespace CringeProject.GUI
     {
         private MainMenuService _service;
         private User _user;
+        private MainMenuWindow _parent;
 
-        public CreateConferenceWindow(User user, MainMenuService service)
+        public CreateConferenceWindow(User user, MainMenuService service, MainMenuWindow parent)
         {
             _service = service;
             _user = user;
+            _parent = parent;
             InitializeComponent();
         }
 
@@ -34,6 +36,8 @@ namespace CringeProject.GUI
             // int numberOfSections = int.Parse(numberOfSectionsBox.Text);
 
             await _service.AddConferenceAsync(_user, conferenceName, startDate, endDate, deadlineForAbstracts, deadlineForPapers);
+            
+            _parent.RefreshLists();
         }
 
         private void CreateConferenceWindow_Load(object sender, EventArgs e)
