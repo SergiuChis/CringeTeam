@@ -33,15 +33,15 @@ namespace CringeProject.GUI
             DateTime endDate = endDateBox.Value;
             DateTime deadlineForAbstracts = deadlineForAbstractsBox.Value;
             DateTime deadlineForPapers = deadlineForPapersBox.Value;
+            DateTime reviewDeadline = reviewDeadlineBox.Value;
+            DateTime biddingDeadline = biddingDeadlineBox.Value;
             // int numberOfSections = int.Parse(numberOfSectionsBox.Text);
 
-            var status = await _service.AddConferenceAsync(_user, conferenceName, startDate, endDate, deadlineForAbstracts, deadlineForPapers);
+            var status = await _service.AddConferenceAsync(_user, conferenceName, startDate, endDate,
+                deadlineForAbstracts, deadlineForPapers, reviewDeadline, biddingDeadline);
 
-            if (status.IsSuccessful != true)
-            {
-                statusOfAdd.Text = status.Message;
-            }
-            
+            statusOfAdd.Text = status.Message;
+
             _parent.RefreshLists();
         }
 

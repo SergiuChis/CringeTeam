@@ -16,7 +16,7 @@ namespace CringeProject.GUI {
 
         private async void createUserButton_Click(object sender, System.EventArgs e) {
             creationStatusLabel.Text = "Creating User";
-            var status = await _loginService.CreateUser(usernameTextbox.Text, passwordTexbox.Text, confirmedPasswordTextbox.Text);
+            var status = await _loginService.CreateUser(usernameTextbox.Text, passwordTexbox.Text, confirmedPasswordTextbox.Text, fullNameTextBox.Text, birthdayPicker.Value);
             creationStatusLabel.Text = status.Message;
         }
     }

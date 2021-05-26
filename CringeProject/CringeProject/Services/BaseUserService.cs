@@ -23,6 +23,10 @@ namespace CringeProject.Services
         }
 
         public async Task<Status> AddPaperAsync(User user, int sectionId, string title, string abstract_, string body) {
+            if (title.Length < 3 || abstract_.Length < 10) {
+                return new Status("Invalid paper!", false);
+            }
+
             var participation = _repository.Participations.FirstOrDefault(p => p.SectionId == sectionId);
             var conferenceId = _repository.Sections
                 .Where(s => s.Id == participation.SectionId)

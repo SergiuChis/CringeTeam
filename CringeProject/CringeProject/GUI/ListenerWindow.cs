@@ -34,6 +34,9 @@ namespace CringeProject.GUI
             var papers = await _service.GetPapersForUser(_user);
             var papersList = papers.ToList();
             myPapersListBox.DataSource = papersList;
+
+            var a = _service.GetAllReviews(_user).ToList();
+            reviewsListBox.DataSource = a;
         }
 
         private void addPaperButton_Click(object sender, EventArgs e) {
@@ -46,7 +49,13 @@ namespace CringeProject.GUI
         }
 
         private void myPapersListBox_SelectedIndexChanged(object sender, EventArgs e) {
-            paperDetailsRichTextBox.Text = ((Paper) myPapersListBox.SelectedItem).Abstract;
+            paperDetailsRichTextBox.Text = 
+                ((Paper) myPapersListBox.SelectedItem).Abstract;
+        }
+
+        private void reviewsListBox_SelectedIndexChanged(object sender, EventArgs e) {
+            recommendationsTextBox.Text =
+                ((Review)reviewsListBox.SelectedItem).Recommendation;
         }
     }
 }

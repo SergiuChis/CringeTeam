@@ -298,6 +298,18 @@
     <Compile Include="Migrations\202105261222143_bidding.designer.cs">
       <DependentUpon>202105261222143_bidding.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105261735117_userChanges.cs" />
+    <Compile Include="Migrations\202105261735117_userChanges.designer.cs">
+      <DependentUpon>202105261735117_userChanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105261936439_final.cs" />
+    <Compile Include="Migrations\202105261936439_final.designer.cs">
+      <DependentUpon>202105261936439_final.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105261943137_final3.cs" />
+    <Compile Include="Migrations\202105261943137_final3.designer.cs">
+      <DependentUpon>202105261943137_final3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -375,6 +387,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105261222143_bidding.resx">
       <DependentUpon>202105261222143_bidding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105261735117_userChanges.resx">
+      <DependentUpon>202105261735117_userChanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105261936439_final.resx">
+      <DependentUpon>202105261936439_final.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105261943137_final3.resx">
+      <DependentUpon>202105261943137_final3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

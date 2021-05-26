@@ -17,5 +17,10 @@ namespace CringeProject.Entities {
         public Paper Paper { get; set; }
 
         public string Grade { get; set; }
+        public string Recommendation { get; set; }
+
+        public override string ToString() {
+            return $"{PaperId} review: {Grade}";
+        }
     }
 }

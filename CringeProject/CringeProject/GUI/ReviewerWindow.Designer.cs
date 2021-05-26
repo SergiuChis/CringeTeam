@@ -39,6 +39,8 @@ namespace CringeProject.GUI {
             this.bidInterestButton = new System.Windows.Forms.Button();
             this.bidRejectionButton = new System.Windows.Forms.Button();
             this.bidStrongRejectionButton = new System.Windows.Forms.Button();
+            this.recommendationTextBox = new System.Windows.Forms.RichTextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // paperLabel
@@ -53,7 +55,7 @@ namespace CringeProject.GUI {
             // 
             // strongAcceptButton
             // 
-            this.strongAcceptButton.Location = new System.Drawing.Point(6, 346);
+            this.strongAcceptButton.Location = new System.Drawing.Point(11, 379);
             this.strongAcceptButton.Margin = new System.Windows.Forms.Padding(2);
             this.strongAcceptButton.Name = "strongAcceptButton";
             this.strongAcceptButton.Size = new System.Drawing.Size(102, 41);
@@ -64,7 +66,7 @@ namespace CringeProject.GUI {
             // 
             // acceptButton
             // 
-            this.acceptButton.Location = new System.Drawing.Point(175, 346);
+            this.acceptButton.Location = new System.Drawing.Point(180, 379);
             this.acceptButton.Margin = new System.Windows.Forms.Padding(2);
             this.acceptButton.Name = "acceptButton";
             this.acceptButton.Size = new System.Drawing.Size(102, 41);
@@ -75,7 +77,7 @@ namespace CringeProject.GUI {
             // 
             // weakAcceptButton
             // 
-            this.weakAcceptButton.Location = new System.Drawing.Point(6, 411);
+            this.weakAcceptButton.Location = new System.Drawing.Point(11, 433);
             this.weakAcceptButton.Margin = new System.Windows.Forms.Padding(2);
             this.weakAcceptButton.Name = "weakAcceptButton";
             this.weakAcceptButton.Size = new System.Drawing.Size(102, 41);
@@ -97,7 +99,7 @@ namespace CringeProject.GUI {
             // 
             // weakRejectButton
             // 
-            this.weakRejectButton.Location = new System.Drawing.Point(6, 479);
+            this.weakRejectButton.Location = new System.Drawing.Point(11, 487);
             this.weakRejectButton.Margin = new System.Windows.Forms.Padding(2);
             this.weakRejectButton.Name = "weakRejectButton";
             this.weakRejectButton.Size = new System.Drawing.Size(102, 41);
@@ -108,7 +110,7 @@ namespace CringeProject.GUI {
             // 
             // rejectButton
             // 
-            this.rejectButton.Location = new System.Drawing.Point(175, 479);
+            this.rejectButton.Location = new System.Drawing.Point(180, 487);
             this.rejectButton.Margin = new System.Windows.Forms.Padding(2);
             this.rejectButton.Name = "rejectButton";
             this.rejectButton.Size = new System.Drawing.Size(102, 41);
@@ -119,7 +121,7 @@ namespace CringeProject.GUI {
             // 
             // strongRejectButton
             // 
-            this.strongRejectButton.Location = new System.Drawing.Point(175, 411);
+            this.strongRejectButton.Location = new System.Drawing.Point(180, 433);
             this.strongRejectButton.Margin = new System.Windows.Forms.Padding(2);
             this.strongRejectButton.Name = "strongRejectButton";
             this.strongRejectButton.Size = new System.Drawing.Size(102, 41);
@@ -133,7 +135,7 @@ namespace CringeProject.GUI {
             this.papersListBox.FormattingEnabled = true;
             this.papersListBox.Location = new System.Drawing.Point(13, 46);
             this.papersListBox.Name = "papersListBox";
-            this.papersListBox.Size = new System.Drawing.Size(264, 277);
+            this.papersListBox.Size = new System.Drawing.Size(264, 251);
             this.papersListBox.TabIndex = 9;
             // 
             // label1
@@ -197,11 +199,30 @@ namespace CringeProject.GUI {
             this.bidStrongRejectionButton.UseVisualStyleBackColor = true;
             this.bidStrongRejectionButton.Click += new System.EventHandler(this.bidStrongRejectionButton_Click);
             // 
+            // recommendationTextBox
+            // 
+            this.recommendationTextBox.Location = new System.Drawing.Point(13, 330);
+            this.recommendationTextBox.Name = "recommendationTextBox";
+            this.recommendationTextBox.Size = new System.Drawing.Size(264, 44);
+            this.recommendationTextBox.TabIndex = 16;
+            this.recommendationTextBox.Text = "";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(22, 311);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(90, 13);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Recommendation";
+            // 
             // ReviewerWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(623, 590);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.recommendationTextBox);
             this.Controls.Add(this.bidRejectionButton);
             this.Controls.Add(this.bidStrongRejectionButton);
             this.Controls.Add(this.bidInterestButton);
@@ -243,5 +264,7 @@ namespace CringeProject.GUI {
         private System.Windows.Forms.Button bidInterestButton;
         private System.Windows.Forms.Button bidRejectionButton;
         private System.Windows.Forms.Button bidStrongRejectionButton;
+        private System.Windows.Forms.RichTextBox recommendationTextBox;
+        private System.Windows.Forms.Label label2;
     }
 }

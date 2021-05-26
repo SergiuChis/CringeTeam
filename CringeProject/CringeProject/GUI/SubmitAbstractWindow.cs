@@ -17,7 +17,8 @@ namespace CringeProject.GUI {
         }
 
         private async void submitAbstractButton_Click(object sender, EventArgs e) {
-            await _service.AddPaperAsync(_user, _participation.SectionId, titleTextBox.Text, abstractRichTextBox.Text, "");
+            var status = await _service.AddPaperAsync(_user, _participation.SectionId, titleTextBox.Text, abstractRichTextBox.Text, "");
+            statusLabel.Text = status.Message;
         }
     }
 }

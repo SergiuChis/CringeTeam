@@ -30,11 +30,11 @@ namespace CringeProject.Services {
             return papersForConference.Except(assignedPapers);
         }
 
-        public async Task<Status> AddReview(string userId, int paperId, string grade) {
+        public async Task<Status> AddReview(string userId, int paperId, string grade, string recommendation) {
             if (string.IsNullOrEmpty(grade))
                 return new Status("Invalid review.", false);
 
-            var review = new Review {Grade = grade, PaperId = paperId, UserName = userId};
+            var review = new Review {Grade = grade, PaperId = paperId, UserName = userId, Recommendation = recommendation };
 
             try {
                 _repository.Reviews.Add(review);

@@ -23,5 +23,10 @@ namespace CringeProject.Services
             var availablePlaces = _repository.Sections.Where(s => s.Id == participation.SectionId).Select(s => s.AvailablePlaces).ToList();
             return availablePlaces[0];
         }
+
+        public IEnumerable<Review> GetAllReviews(User user) {
+            var paperIds = _repository.Papers.Where(p => p.UserName == user.UserName).Select(p => p.Id);
+            return _repository.Reviews.Where(r => paperIds.Contains(r.PaperId));
+        }
     }
 }

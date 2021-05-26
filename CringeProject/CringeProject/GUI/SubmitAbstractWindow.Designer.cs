@@ -29,6 +29,7 @@ namespace CringeProject.GUI {
             this.submitAbstractButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.titleTextBox = new System.Windows.Forms.TextBox();
+            this.statusLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -50,7 +51,7 @@ namespace CringeProject.GUI {
             // 
             // submitAbstractButton
             // 
-            this.submitAbstractButton.Location = new System.Drawing.Point(39, 408);
+            this.submitAbstractButton.Location = new System.Drawing.Point(39, 459);
             this.submitAbstractButton.Name = "submitAbstractButton";
             this.submitAbstractButton.Size = new System.Drawing.Size(257, 32);
             this.submitAbstractButton.TabIndex = 2;
@@ -74,11 +75,20 @@ namespace CringeProject.GUI {
             this.titleTextBox.Size = new System.Drawing.Size(305, 20);
             this.titleTextBox.TabIndex = 4;
             // 
+            // statusLabel
+            // 
+            this.statusLabel.AutoSize = true;
+            this.statusLabel.Location = new System.Drawing.Point(116, 421);
+            this.statusLabel.Name = "statusLabel";
+            this.statusLabel.Size = new System.Drawing.Size(0, 13);
+            this.statusLabel.TabIndex = 5;
+            // 
             // SubmitAbstractWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(329, 452);
+            this.ClientSize = new System.Drawing.Size(332, 503);
+            this.Controls.Add(this.statusLabel);
             this.Controls.Add(this.titleTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.submitAbstractButton);
@@ -98,5 +108,6 @@ namespace CringeProject.GUI {
         private System.Windows.Forms.Button submitAbstractButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox titleTextBox;
+        private System.Windows.Forms.Label statusLabel;
     }
 }

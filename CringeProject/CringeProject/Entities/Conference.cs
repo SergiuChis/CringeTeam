@@ -16,6 +16,10 @@ namespace CringeProject.Entities {
 
         public DateTime PaperDeadline { get; set; }
 
+        public DateTime BidProposalDeadline { get; set; }
+
+        public DateTime ReviewDeadline { get; set; }
+
         public DateTime StartDate { get; set; }
 
         public DateTime EndDate { get; set; }

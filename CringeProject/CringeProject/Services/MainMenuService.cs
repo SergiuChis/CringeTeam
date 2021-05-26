@@ -34,14 +34,27 @@ namespace CringeProject.Services {
             return _repository.Sections.ToList();
         }
 
-        public async Task<Status> AddConferenceAsync(User creatingUser, string conferenceName, DateTime startDate, DateTime endDate, DateTime deadlineForAbstracts, DateTime deadlineForPapers)
+        public async Task<Status> AddConferenceAsync(User creatingUser, string conferenceName, DateTime startDate, DateTime endDate, DateTime deadlineForAbstracts, DateTime deadlineForPapers, DateTime reviewDeadline, DateTime biddingDeadline)
         {
             if (conferenceName.Length < 5)
             {
                 return new Status("Conference name is too short", false);
             }
 
-            Conference newConference = new Conference { Name = conferenceName, StartDate = startDate, EndDate = endDate, AbstractDeadline = deadlineForAbstracts, PaperDeadline = deadlineForPapers };
+            if (startDate < DateTime.Now || endDate < DateTime.Now || endDate < startDate) {
+                return new Status("Conference start or end date is invalid", false);
+            }
+
+            if (biddingDeadline < startDate || reviewDeadline < startDate) {
+                return new Status("Review or Bidding deadline is invalid", false);
+            }
+
+            Conference newConference = new Conference {
+                Name = conferenceName, StartDate = startDate, EndDate = endDate,
+                AbstractDeadline = deadlineForAbstracts, PaperDeadline = deadlineForPapers,
+                BidProposalDeadline = biddingDeadline, ReviewDeadline = reviewDeadline
+            };
+
             var addedConference = _repository.Conferences.Add(newConference);
             var newSection = new Section { ConferenceId = addedConference.Id, Room = "AdminRoom", AvailablePlaces = 1 };
             var addedSection = _repository.Sections.Add(newSection);

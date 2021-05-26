@@ -33,9 +33,9 @@ namespace CringeProject.GUI {
             this.label3 = new System.Windows.Forms.Label();
             this.creationStatusLabel = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.fullNameTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.birthdayPicker = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // createUserButton
@@ -115,19 +115,12 @@ namespace CringeProject.GUI {
             this.label4.TabIndex = 8;
             this.label4.Text = "Birth Day";
             // 
-            // textBox1
+            // fullNameTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(193, 227);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(247, 20);
-            this.textBox1.TabIndex = 9;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(189, 291);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(247, 20);
-            this.textBox2.TabIndex = 12;
+            this.fullNameTextBox.Location = new System.Drawing.Point(189, 291);
+            this.fullNameTextBox.Name = "fullNameTextBox";
+            this.fullNameTextBox.Size = new System.Drawing.Size(247, 20);
+            this.fullNameTextBox.TabIndex = 12;
             // 
             // label5
             // 
@@ -138,14 +131,21 @@ namespace CringeProject.GUI {
             this.label5.TabIndex = 11;
             this.label5.Text = "Full Name";
             // 
+            // birthdayPicker
+            // 
+            this.birthdayPicker.Location = new System.Drawing.Point(193, 230);
+            this.birthdayPicker.Name = "birthdayPicker";
+            this.birthdayPicker.Size = new System.Drawing.Size(243, 20);
+            this.birthdayPicker.TabIndex = 13;
+            // 
             // CreateUserWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(526, 440);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.birthdayPicker);
+            this.Controls.Add(this.fullNameTextBox);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.creationStatusLabel);
             this.Controls.Add(this.confirmedPasswordTextbox);
@@ -173,8 +173,8 @@ namespace CringeProject.GUI {
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label creationStatusLabel;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox fullNameTextBox;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DateTimePicker birthdayPicker;
     }
 }

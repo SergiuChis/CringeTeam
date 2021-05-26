@@ -13,6 +13,10 @@ namespace CringeProject.Entities
 
         public string Password { get; set; }
 
+        public string FullName { get; set; }
+
+        public DateTime DateTime { get; set; }
+
         public User() {}
         public User(string userName, string password)
         {

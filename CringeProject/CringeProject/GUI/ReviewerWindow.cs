@@ -54,7 +54,7 @@ namespace CringeProject.GUI {
 
         private async void AddReview(string grade) {
             var selectedPaper = (Paper) papersListBox.SelectedItem;
-            await _service.AddReview(_participation.UserName, selectedPaper.Id, grade);
+            await _service.AddReview(_participation.UserName, selectedPaper.Id, grade, recommendationTextBox.Text);
         }
 
         private void bidStrongInterestButton_Click(object sender, EventArgs e) {

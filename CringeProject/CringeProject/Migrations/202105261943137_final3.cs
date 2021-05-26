@@ -1,0 +1,18 @@
+﻿namespace CringeProject.Migrations
+{
+    using System;
+    using System.Data.Entity.Migrations;
+    
+    public partial class final3 : DbMigration
+    {
+        public override void Up()
+        {
+            AddColumn("dbo.Reviews", "Recommendation", c => c.String());
+        }
+        
+        public override void Down()
+        {
+            DropColumn("dbo.Reviews", "Recommendation");
+        }
+    }
+}

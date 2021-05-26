@@ -38,6 +38,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.submitAbstractButton = new System.Windows.Forms.Button();
             this.paperDetailsRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.reviewsListBox = new System.Windows.Forms.ListBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.recommendationsTextBox = new System.Windows.Forms.RichTextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // roomLabel
@@ -134,11 +138,51 @@
             this.paperDetailsRichTextBox.TabIndex = 9;
             this.paperDetailsRichTextBox.Text = "";
             // 
+            // reviewsListBox
+            // 
+            this.reviewsListBox.FormattingEnabled = true;
+            this.reviewsListBox.Location = new System.Drawing.Point(531, 34);
+            this.reviewsListBox.Name = "reviewsListBox";
+            this.reviewsListBox.Size = new System.Drawing.Size(224, 264);
+            this.reviewsListBox.TabIndex = 10;
+            this.reviewsListBox.SelectedIndexChanged += new System.EventHandler(this.reviewsListBox_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(539, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(48, 13);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Reviews";
+            // 
+            // recommendationsTextBox
+            // 
+            this.recommendationsTextBox.Enabled = false;
+            this.recommendationsTextBox.Location = new System.Drawing.Point(531, 330);
+            this.recommendationsTextBox.Name = "recommendationsTextBox";
+            this.recommendationsTextBox.Size = new System.Drawing.Size(224, 88);
+            this.recommendationsTextBox.TabIndex = 12;
+            this.recommendationsTextBox.Text = "";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(542, 311);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(95, 13);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Recommendations";
+            // 
             // ListenerWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(505, 430);
+            this.ClientSize = new System.Drawing.Size(767, 434);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.recommendationsTextBox);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.reviewsListBox);
             this.Controls.Add(this.paperDetailsRichTextBox);
             this.Controls.Add(this.submitAbstractButton);
             this.Controls.Add(this.label2);
@@ -170,5 +214,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button submitAbstractButton;
         private System.Windows.Forms.RichTextBox paperDetailsRichTextBox;
+        private System.Windows.Forms.ListBox reviewsListBox;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.RichTextBox recommendationsTextBox;
+        private System.Windows.Forms.Label label4;
     }
 }
