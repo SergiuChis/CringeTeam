@@ -37,6 +37,9 @@ namespace CringeProject.GUI {
             this.availablePlacesLabel = new System.Windows.Forms.Label();
             this.roomTextBox = new System.Windows.Forms.TextBox();
             this.availablePlacesTextBox = new System.Windows.Forms.TextBox();
+            this.newRoleLabel = new System.Windows.Forms.Label();
+            this.newRoleComboBox = new System.Windows.Forms.ComboBox();
+            this.confirmChangeRoleButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -153,11 +156,41 @@ namespace CringeProject.GUI {
             this.availablePlacesTextBox.Size = new System.Drawing.Size(186, 20);
             this.availablePlacesTextBox.TabIndex = 13;
             // 
+            // newRoleLabel
+            // 
+            this.newRoleLabel.AutoSize = true;
+            this.newRoleLabel.Location = new System.Drawing.Point(328, 262);
+            this.newRoleLabel.Name = "newRoleLabel";
+            this.newRoleLabel.Size = new System.Drawing.Size(54, 13);
+            this.newRoleLabel.TabIndex = 14;
+            this.newRoleLabel.Text = "New Role";
+            // 
+            // newRoleComboBox
+            // 
+            this.newRoleComboBox.FormattingEnabled = true;
+            this.newRoleComboBox.Location = new System.Drawing.Point(331, 279);
+            this.newRoleComboBox.Name = "newRoleComboBox";
+            this.newRoleComboBox.Size = new System.Drawing.Size(121, 21);
+            this.newRoleComboBox.TabIndex = 15;
+            // 
+            // confirmChangeRoleButton
+            // 
+            this.confirmChangeRoleButton.Location = new System.Drawing.Point(328, 325);
+            this.confirmChangeRoleButton.Name = "confirmChangeRoleButton";
+            this.confirmChangeRoleButton.Size = new System.Drawing.Size(137, 46);
+            this.confirmChangeRoleButton.TabIndex = 16;
+            this.confirmChangeRoleButton.Text = "Confirm";
+            this.confirmChangeRoleButton.UseVisualStyleBackColor = true;
+            this.confirmChangeRoleButton.Click += new System.EventHandler(this.confirmChangeRoleButton_Click);
+            // 
             // SteeringCommitteeWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(691, 406);
+            this.Controls.Add(this.confirmChangeRoleButton);
+            this.Controls.Add(this.newRoleComboBox);
+            this.Controls.Add(this.newRoleLabel);
             this.Controls.Add(this.availablePlacesTextBox);
             this.Controls.Add(this.roomTextBox);
             this.Controls.Add(this.availablePlacesLabel);
@@ -194,5 +227,8 @@ namespace CringeProject.GUI {
         private System.Windows.Forms.Label availablePlacesLabel;
         private System.Windows.Forms.TextBox roomTextBox;
         private System.Windows.Forms.TextBox availablePlacesTextBox;
+        private System.Windows.Forms.Label newRoleLabel;
+        private System.Windows.Forms.ComboBox newRoleComboBox;
+        private System.Windows.Forms.Button confirmChangeRoleButton;
     }
 }

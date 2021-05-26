@@ -11,14 +11,16 @@ namespace CringeProject.Services {
     public class SteeringCommitteeService : BaseUserService {
         public SteeringCommitteeService(RepositoryContext repository) : base(repository) { }
 
-        public async Task<Status> UpdateUserRole(Participation participation, string newRole) {
-            var existingUser = _repository.Users.FirstOrDefault(u => u.UserName == participation.UserName);
-            if (existingUser == null)
-                return new Status("Invalid user.", false);
-
-            participation.UserType = newRole;
-
+        public async Task<Status> UpdateUserRole(int sectionId, Conference conference, User user, string newRole) {
             try {
+                var sections = _repository.Sections.Where(s => s.ConferenceId == conference.Id).Select(s=>s.Id);
+                var oldParticipations =
+                    _repository.Participations.Where(p => sections.Contains(p.SectionId) && p.UserName == user.UserName);
+                _repository.Participations.RemoveRange(oldParticipations);
+
+                var newParticipation = new Participation()
+                    {SectionId = sectionId, UserName = user.UserName, UserType = newRole};
+                _repository.Participations.Add(newParticipation);
                 await _repository.SaveChangesAsync();
             }
             catch (Exception) {
@@ -53,6 +55,15 @@ namespace CringeProject.Services {
         public Conference GetConferenceForSection(int sectionId) {
             var conferenceId = _repository.Sections.Where(s => s.Id == sectionId).Select(s => s.ConferenceId).FirstOrDefault();
             return _repository.Conferences.FirstOrDefault(c => c.Id == conferenceId);
+        }
+
+        public IEnumerable<User> GetUsersForConference(int conferenceId) {
+            var conference = _repository.Conferences.FirstOrDefault(c => c.Id == conferenceId);
+            var sections = _repository.Sections.Where(s=>s.ConferenceId == conference.Id).Select(s=>s.Id);
+            var usernamesForSections = _repository.Participations
+                .Where(p => sections.Contains(p.SectionId))
+                .Select(p => p.UserName);
+            return _repository.Users.Where(u => usernamesForSections.Contains(u.UserName));
         }
     }
 }

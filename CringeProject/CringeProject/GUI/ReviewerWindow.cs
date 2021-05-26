@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CringeProject.Services;
 
 namespace CringeProject.GUI {
     public partial class ReviewerWindow : Form {
-        public ReviewerWindow() {
+        public ReviewerWindow(ReviewerService service) {
             InitializeComponent();
         }
     }

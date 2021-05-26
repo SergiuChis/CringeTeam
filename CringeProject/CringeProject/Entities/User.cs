@@ -19,5 +19,9 @@ namespace CringeProject.Entities
             UserName = userName ?? throw new ArgumentNullException(nameof(userName));
             Password = password ?? throw new ArgumentNullException(nameof(password));
         }
+
+        public override string ToString() {
+            return this.UserName;
+        }
     }
 }

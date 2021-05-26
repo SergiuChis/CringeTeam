@@ -29,7 +29,7 @@ namespace CringeProject.GUI
             conferencesWithParticipationsList.Refresh();
 
             availableConferencesList.DataSource = null;
-            var all_sections = _service.GetAllSections();
+            var all_sections = _service.GetAllSections().Where(s => s.Room != "AdminRoom").ToList();
             availableConferencesList.DataSource = all_sections;
 
             availableConferencesList.Refresh();
@@ -37,7 +37,7 @@ namespace CringeProject.GUI
 
         private void BaseUserWindow_Load(object sender, EventArgs e)
         {
-            var sections = _service.GetAllSections();
+            var sections = _service.GetAllSections().Where(s => s.Room != "AdminRoom").ToList();
             var conferences = _service.GetConferencesForUser(_user);
             availableConferencesList.DataSource = sections;
             conferencesWithParticipationsList.DataSource = conferences;
@@ -55,10 +55,13 @@ namespace CringeProject.GUI
 
             switch (participation.UserType) {
                 case UserType.SteeringCommittee:
-                    WindowCreationFactory.CreateSteeringCommitteeWindow(participation).Show();
+                    WindowCreationFactory.CreateSteeringCommitteeWindow(participation, selected).Show();
                     return;
                 case UserType.Listener:
                     WindowCreationFactory.CreateNewListenerWindow(_user, participation).Show();
+                    return;
+                case UserType.Reviewer:
+                    WindowCreationFactory.CreateReviewerWindow(_user, participation).Show();
                     return;
                 default:
                     return;

@@ -276,6 +276,7 @@
     <Compile Include="Services\MainMenuService.cs" />
     <Compile Include="Services\Login\LoginService.cs" />
     <Compile Include="Services\PaperManagementService.cs" />
+    <Compile Include="Services\ReviewerService.cs" />
     <Compile Include="Services\SteeringCommitteeService.cs" />
     <Compile Include="WindowCreationFactory.cs" />
     <EmbeddedResource Include="GUI\AddFullPaperWindow.resx">

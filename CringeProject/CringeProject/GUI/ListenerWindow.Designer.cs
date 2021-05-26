@@ -37,6 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.submitAbstractButton = new System.Windows.Forms.Button();
+            this.paperDetailsRichTextBox = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // roomLabel
@@ -94,6 +95,7 @@
             this.myPapersListBox.Name = "myPapersListBox";
             this.myPapersListBox.Size = new System.Drawing.Size(229, 316);
             this.myPapersListBox.TabIndex = 5;
+            this.myPapersListBox.SelectedIndexChanged += new System.EventHandler(this.myPapersListBox_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -123,11 +125,21 @@
             this.submitAbstractButton.UseVisualStyleBackColor = true;
             this.submitAbstractButton.Click += new System.EventHandler(this.submitAbstractButton_Click);
             // 
+            // paperDetailsRichTextBox
+            // 
+            this.paperDetailsRichTextBox.Enabled = false;
+            this.paperDetailsRichTextBox.Location = new System.Drawing.Point(274, 264);
+            this.paperDetailsRichTextBox.Name = "paperDetailsRichTextBox";
+            this.paperDetailsRichTextBox.Size = new System.Drawing.Size(209, 78);
+            this.paperDetailsRichTextBox.TabIndex = 9;
+            this.paperDetailsRichTextBox.Text = "";
+            // 
             // ListenerWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(505, 430);
+            this.Controls.Add(this.paperDetailsRichTextBox);
             this.Controls.Add(this.submitAbstractButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -157,5 +169,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button submitAbstractButton;
+        private System.Windows.Forms.RichTextBox paperDetailsRichTextBox;
     }
 }

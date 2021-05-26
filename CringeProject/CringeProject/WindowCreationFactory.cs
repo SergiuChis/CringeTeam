@@ -19,10 +19,10 @@ namespace CringeProject {
             return new CreateUserWindow(loginService);
         }
 
-        public static SteeringCommitteeWindow CreateSteeringCommitteeWindow(Participation participation)
+        public static SteeringCommitteeWindow CreateSteeringCommitteeWindow(Participation participation, Conference conference)
         {
             var steeringCommitteeService = (SteeringCommitteeService)Program.ServiceProvider.GetService(typeof(SteeringCommitteeService));
-            return new SteeringCommitteeWindow(participation, steeringCommitteeService);
+            return new SteeringCommitteeWindow(participation, conference, steeringCommitteeService);
         }
         
         public static MainMenuWindow CreateNewBaseUserWindow(User user)
@@ -59,6 +59,11 @@ namespace CringeProject {
         {
             var service = (MainMenuService)Program.ServiceProvider.GetService(typeof(MainMenuService));
             return new UpdateConferenceDetailsWindow(confID, user, service, parent);
+        }
+
+        public static ReviewerWindow CreateReviewerWindow(User user, Participation participation) {
+            var service = (ReviewerService)Program.ServiceProvider.GetService(typeof(ReviewerService));
+            return new ReviewerWindow(service);
         }
     }
 }

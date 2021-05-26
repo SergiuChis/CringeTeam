@@ -5,6 +5,6 @@
         public const string SteeringCommittee = "SteeringCommittee";
         public const string SessionChair = "SessionChair";
         public const string Listener = "Listener";
-        public const string ConferenceChair = "ConferenceChair";
+        public const string Reviewer = "Reviewer";
     }
 }

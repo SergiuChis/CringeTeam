@@ -81,7 +81,9 @@ namespace CringeProject.Services {
                 SectionId = section.Id
             };
 
-            var searchForDuplicateParticipation = _repository.Participations.Where(p => p.UserName == participation.UserName).ToList();
+            var searchForDuplicateParticipation = _repository.Participations
+                .Where(p => p.UserName == participation.UserName && p.SectionId == section.Id)
+                .ToList();
             if (searchForDuplicateParticipation.Count != 0)
             {
                 return new Status("Participation already exists", false);

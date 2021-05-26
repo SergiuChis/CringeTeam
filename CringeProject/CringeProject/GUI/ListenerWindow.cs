@@ -31,9 +31,9 @@ namespace CringeProject.GUI
             roomNameLabel.Text = _service.GetRoomName(_participation);
             availablePlacesNumberLabel.Text = _service.GetAvailablePlaces(_participation).ToString();
 
-            //TODO: fix papers not appearing in the list bug.
             var papers = await _service.GetPapersForUser(_user);
-            myPapersListBox.DataSource = papers.ToList();
+            var papersList = papers.ToList();
+            myPapersListBox.DataSource = papersList;
         }
 
         private void addPaperButton_Click(object sender, EventArgs e) {
@@ -43,6 +43,10 @@ namespace CringeProject.GUI
 
         private void submitAbstractButton_Click(object sender, EventArgs e) {
             WindowCreationFactory.CreateSubmitAbstractWindow(_user, _participation).Show();
+        }
+
+        private void myPapersListBox_SelectedIndexChanged(object sender, EventArgs e) {
+            paperDetailsRichTextBox.Text = ((Paper) myPapersListBox.SelectedItem).Abstract;
         }
     }
 }

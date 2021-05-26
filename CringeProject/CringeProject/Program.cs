@@ -37,7 +37,8 @@ namespace CringeProject
                 .AddScoped<SteeringCommitteeService>()
                 .AddScoped<MainMenuService>()
                 .AddScoped<ListenerService>()
-                .AddScoped<PaperManagementService>();
+                .AddScoped<PaperManagementService>()
+                .AddScoped<ReviewerService>();
 
             ServiceProvider = services.BuildServiceProvider();
             //Structure: 

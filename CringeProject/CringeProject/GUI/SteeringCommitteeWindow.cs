@@ -1,15 +1,20 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 using CringeProject.Entities;
+using CringeProject.Entities.UserTypes;
 using CringeProject.Services;
 
 namespace CringeProject.GUI {
     public partial class SteeringCommitteeWindow : Form {
+        private readonly Conference _conference;
         private readonly Participation _participation;
         private readonly SteeringCommitteeService _steeringCommitteeService;
 
-        public SteeringCommitteeWindow(Participation participation, SteeringCommitteeService steeringCommitteeService) {
+        public SteeringCommitteeWindow(Participation participation, Conference conference, SteeringCommitteeService steeringCommitteeService) {
             _participation = participation;
+            _conference = conference;
             _steeringCommitteeService = steeringCommitteeService;
             InitializeComponent();
         }
@@ -20,10 +25,32 @@ namespace CringeProject.GUI {
             roomLabel.Hide();
             availablePlacesTextBox.Hide();
             roomTextBox.Hide();
+
+            confirmChangeRoleButton.Hide();
+            newRoleLabel.Hide();
+            newRoleComboBox.Hide();
+
+            newRoleComboBox.DataSource = new List<string>(new []{UserType.Listener, UserType.Reviewer, UserType.SessionChair});
+
+            usersListbox.DataSource = _steeringCommitteeService.GetUsersForConference(_conference.Id).ToList();
         }
 
         private void updateUserRoleButton_Click(object sender, EventArgs e) {
+            updateUserRoleButton.Hide();
+            confirmChangeRoleButton.Show();
+            newRoleComboBox.Show();
+            newRoleLabel.Show();
+        }
 
+        private async void confirmChangeRoleButton_Click(object sender, EventArgs e) {
+            updateUserRoleButton.Show();
+            confirmChangeRoleButton.Hide();
+            newRoleComboBox.Hide();
+            newRoleLabel.Hide();
+
+            var newRole = (string)newRoleComboBox.SelectedItem;
+
+            await _steeringCommitteeService.UpdateUserRole(_participation.SectionId, _conference, (User)usersListbox.SelectedItem, newRole); // TODO
         }
 
         private void updateConferenceButton_Click(object sender, EventArgs e) {
