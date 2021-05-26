@@ -187,7 +187,7 @@ namespace CringeProject.GUI {
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(691, 359);
+            this.ClientSize = new System.Drawing.Size(684, 359);
             this.Controls.Add(this.assignPaperToReviewerButton);
             this.Controls.Add(this.confirmChangeRoleButton);
             this.Controls.Add(this.newRoleComboBox);

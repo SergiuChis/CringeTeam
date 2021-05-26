@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Windows.Forms;
 using CringeProject.Entities;
+using CringeProject.Entities.BiddingInterests;
 using CringeProject.Entities.Grades;
 using CringeProject.Services;
 
@@ -20,6 +21,7 @@ namespace CringeProject.GUI {
 
         private void ReviewerWindow_Load(object sender, EventArgs e) {
             papersListBox.DataSource = _service.GetAllPapersForReviewer(_user).ToList();
+            biddingPapersListBox.DataSource = _service.GetAllPapersAvailableForBidding(_participation.SectionId, _user).ToList();
         }
 
         private void strongAcceptButton_Click(object sender, EventArgs e) {
@@ -53,6 +55,27 @@ namespace CringeProject.GUI {
         private async void AddReview(string grade) {
             var selectedPaper = (Paper) papersListBox.SelectedItem;
             await _service.AddReview(_participation.UserName, selectedPaper.Id, grade);
+        }
+
+        private void bidStrongInterestButton_Click(object sender, EventArgs e) {
+            AddBidding(BiddingInterest.StrongAccept);
+        }
+
+        private void bidInterestButton_Click(object sender, EventArgs e) {
+            AddBidding(BiddingInterest.Accept);
+        }
+
+        private void bidStrongRejectionButton_Click(object sender, EventArgs e) {
+            AddBidding(BiddingInterest.StrongDecline);
+        }
+
+        private void bidRejectionButton_Click(object sender, EventArgs e) {
+            AddBidding(BiddingInterest.Decline);
+        }
+
+        private async void AddBidding(string interest) {
+            var selectedPaper = (Paper)biddingPapersListBox.SelectedItem;
+            await _service.AddBidding(_participation.UserName, selectedPaper.Id, interest);
         }
     }
 }

@@ -10,6 +10,7 @@ namespace CringeProject.Repository {
         public DbSet<Participation> Participations { get; set; }
         public DbSet<Review> Reviews { get; set; }
         public DbSet<ReviewAssignment> ReviewAssignments { get; set; }
+        public DbSet<Bid> Bids { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder) {
             /*modelBuilder.Entity<User>()

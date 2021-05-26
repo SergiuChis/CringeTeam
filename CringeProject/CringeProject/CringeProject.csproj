@@ -175,6 +175,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Bid.cs" />
+    <Compile Include="Entities\BiddingInterests\BiddingInterest.cs" />
     <Compile Include="Entities\Conference.cs" />
     <Compile Include="Entities\Grades\Grades.cs" />
     <Compile Include="Entities\Paper.cs" />
@@ -292,9 +294,9 @@
     <Compile Include="Migrations\202105260112231_changes3.designer.cs">
       <DependentUpon>202105260112231_changes3.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202105260711296_CirtoMig.cs" />
-    <Compile Include="Migrations\202105260711296_CirtoMig.designer.cs">
-      <DependentUpon>202105260711296_CirtoMig.cs</DependentUpon>
+    <Compile Include="Migrations\202105261222143_bidding.cs" />
+    <Compile Include="Migrations\202105261222143_bidding.designer.cs">
+      <DependentUpon>202105261222143_bidding.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
@@ -371,8 +373,8 @@
     <EmbeddedResource Include="Migrations\202105260112231_changes3.resx">
       <DependentUpon>202105260112231_changes3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105260711296_CirtoMig.resx">
-      <DependentUpon>202105260711296_CirtoMig.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105261222143_bidding.resx">
+      <DependentUpon>202105261222143_bidding.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

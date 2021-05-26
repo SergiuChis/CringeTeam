@@ -24,14 +24,19 @@ namespace CringeProject.GUI {
 
         private void AssignPaperToReviewerWindow_Load(object sender, EventArgs e) {
             reviewersListBox.DataSource = _service.GetAllReviewers(_participation.SectionId).ToList();
-            var a = _service.GetAllPapers(_participation.SectionId).ToList();
-            papersListBox.DataSource = a;
+            papersListBox.DataSource = _service.GetAllPapers(_participation.SectionId).ToList();
+            bidsListBox.DataSource = _service.GetAllBids().ToList();
         }
 
         private void assignPaperButton_Click(object sender, EventArgs e) {
             var selectedPaper = (Paper) papersListBox.SelectedItem;
             var selectedReviewer = (User)reviewersListBox.SelectedItem;
             _service.AddReviewAssignment(selectedReviewer.UserName, selectedPaper.Id);
+        }
+
+        private async void acceptBidProposalButton_Click(object sender, EventArgs e) {
+            var selectedBid = (Bid) bidsListBox.SelectedItem;
+            await _service.AcceptBidProposal(selectedBid);
         }
     }
 }
