@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Steps/dashboard.md",
-            "mode": "source"
+            "file": "Steps/Assigning papers.md",
+            "mode": "preview"
           }
         }
       }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Steps/dashboard.md",
+                "file": "Steps/Assigning papers.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "9534bd4875161136",
   "lastOpenFiles": [
+    "Steps/Assigning papers.md",
+    "Roles/Steering Comitee.md",
+    "Roles/Reviewer.md",
     "Steps/dashboard.md",
-    "Pasted image 20210525214849.png",
+    "Roles/Author.md",
+    "Roles/Listener.md",
     "Steps/Log in.md",
-    "Conference Management System.md",
-    "dashboard.md",
     "Steps/Create user account.md",
-    "restrictions.md",
-    "Log in.md",
-    "Create user account.md",
-    "Author.md"
+    "Conference Management System.md",
+    "Steps/Add Full Paper.md"
   ]
 }
