@@ -292,6 +292,10 @@
     <Compile Include="Migrations\202105260112231_changes3.designer.cs">
       <DependentUpon>202105260112231_changes3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105260711296_CirtoMig.cs" />
+    <Compile Include="Migrations\202105260711296_CirtoMig.designer.cs">
+      <DependentUpon>202105260711296_CirtoMig.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -366,6 +370,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105260112231_changes3.resx">
       <DependentUpon>202105260112231_changes3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105260711296_CirtoMig.resx">
+      <DependentUpon>202105260711296_CirtoMig.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

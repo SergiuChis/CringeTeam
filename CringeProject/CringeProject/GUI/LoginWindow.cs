@@ -14,7 +14,14 @@ namespace CringeProject.GUI {
 
         private async void loginButton_Click(object sender, EventArgs e) {
             var user = await _loginService.Authenticate(usernameTextbox.Text, passwordTextbox.Text);
-            WindowCreationFactory.CreateNewBaseUserWindow(user).Show();
+            if (user == null)
+            {
+                loginStatus.Text = "Wrong credentials";
+            }
+            else
+            {
+                WindowCreationFactory.CreateNewBaseUserWindow(user).Show();
+            }
         }
 
         private void createAccountButton_Click(object sender, EventArgs e) {

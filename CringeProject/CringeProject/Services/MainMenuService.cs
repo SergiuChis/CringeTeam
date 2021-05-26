@@ -36,6 +36,11 @@ namespace CringeProject.Services {
 
         public async Task<Status> AddConferenceAsync(User creatingUser, string conferenceName, DateTime startDate, DateTime endDate, DateTime deadlineForAbstracts, DateTime deadlineForPapers)
         {
+            if (conferenceName.Length < 5)
+            {
+                return new Status("Conference name is too short", false);
+            }
+
             Conference newConference = new Conference { Name = conferenceName, StartDate = startDate, EndDate = endDate, AbstractDeadline = deadlineForAbstracts, PaperDeadline = deadlineForPapers };
             var addedConference = _repository.Conferences.Add(newConference);
             var newSection = new Section { ConferenceId = addedConference.Id, Room = "AdminRoom", AvailablePlaces = 1 };
@@ -56,6 +61,11 @@ namespace CringeProject.Services {
 
         public async Task<Status> UpdateConferenceAsync(int conferenceID, string conferenceName, DateTime startDate, DateTime endDate, DateTime deadlineForAbstracts, DateTime deadlineForPapers)
         {
+            if (conferenceName.Length < 5)
+            {
+                return new Status("Conference name too short", false);
+            }
+
             var conference = _repository.Conferences.SingleOrDefault(conf => conf.Id == conferenceID);
             conference.Name = conferenceName;
             conference.StartDate = startDate;

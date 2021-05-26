@@ -39,6 +39,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.conferenceNameBox = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.updateStatus = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // updateConference
@@ -132,11 +133,20 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Conference name";
             // 
-            // UpdateConferenceDetails
+            // updateStatus
+            // 
+            this.updateStatus.AutoSize = true;
+            this.updateStatus.Location = new System.Drawing.Point(310, 427);
+            this.updateStatus.Name = "updateStatus";
+            this.updateStatus.Size = new System.Drawing.Size(0, 25);
+            this.updateStatus.TabIndex = 24;
+            // 
+            // UpdateConferenceDetailsWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(719, 594);
+            this.Controls.Add(this.updateStatus);
             this.Controls.Add(this.updateConference);
             this.Controls.Add(this.endDateBox);
             this.Controls.Add(this.label5);
@@ -148,7 +158,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.conferenceNameBox);
             this.Controls.Add(this.label1);
-            this.Name = "UpdateConferenceDetails";
+            this.Name = "UpdateConferenceDetailsWindow";
             this.Text = "UpdateConferenceDetails";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -168,5 +178,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RichTextBox conferenceNameBox;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label updateStatus;
     }
 }

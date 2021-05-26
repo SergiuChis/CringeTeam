@@ -41,6 +41,7 @@
             this.endDateBox = new System.Windows.Forms.DateTimePicker();
             this.addConference = new System.Windows.Forms.Button();
             this.sectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.statusOfAdd = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.sectionBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -139,11 +140,20 @@
             // 
             this.sectionBindingSource.DataSource = typeof(CringeProject.Entities.Section);
             // 
+            // statusOfAdd
+            // 
+            this.statusOfAdd.AutoSize = true;
+            this.statusOfAdd.Location = new System.Drawing.Point(274, 416);
+            this.statusOfAdd.Name = "statusOfAdd";
+            this.statusOfAdd.Size = new System.Drawing.Size(0, 25);
+            this.statusOfAdd.TabIndex = 13;
+            // 
             // CreateConferenceWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(707, 579);
+            this.Controls.Add(this.statusOfAdd);
             this.Controls.Add(this.addConference);
             this.Controls.Add(this.endDateBox);
             this.Controls.Add(this.label5);
@@ -178,5 +188,6 @@
         private System.Windows.Forms.DateTimePicker endDateBox;
         private System.Windows.Forms.Button addConference;
         private System.Windows.Forms.BindingSource sectionBindingSource;
+        private System.Windows.Forms.Label statusOfAdd;
     }
 }

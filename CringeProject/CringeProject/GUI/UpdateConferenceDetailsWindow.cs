@@ -36,7 +36,12 @@ namespace CringeProject.GUI
             DateTime deadlineForAbstracts = deadlineForAbstractsBox.Value;
             DateTime deadlineForPapers = deadlineForPapersBox.Value;
 
-            await _service.UpdateConferenceAsync(_conferenceID, conferenceName, startDate, endDate, deadlineForAbstracts, deadlineForPapers);
+            var status = await _service.UpdateConferenceAsync(_conferenceID, conferenceName, startDate, endDate, deadlineForAbstracts, deadlineForPapers);
+
+            if (status.IsSuccessful != true)
+            {
+                updateStatus.Text = status.Message;
+            }
 
             _parent.RefreshLists();
         }
