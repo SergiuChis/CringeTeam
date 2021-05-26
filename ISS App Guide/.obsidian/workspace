@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "restrictions.md",
-            "mode": "source"
+            "file": "Steps/Assigning papers.md",
+            "mode": "preview"
           }
         }
       }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "restrictions.md",
+                "file": "Steps/Assigning papers.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "9534bd4875161136",
   "lastOpenFiles": [
-    "restrictions.md",
-    "Conference Management System.md",
-    "Assigning papers.md",
+    "Steps/Assigning papers.md",
     "Roles/Steering Comitee.md",
     "Roles/Reviewer.md",
-    "Add Full Paper.md",
+    "Steps/dashboard.md",
     "Roles/Author.md",
-    "Submit Abstract.md",
     "Roles/Listener.md",
-    "Steps/dashboard.md"
+    "Steps/Log in.md",
+    "Steps/Create user account.md",
+    "Conference Management System.md",
+    "Steps/Add Full Paper.md"
   ]
 }

@@ -7,7 +7,6 @@ The app is built to accomodate the workflows in creating and managing conference
 
 - User roles:
 	- [[Steering Comitee]]
-	- [[Session Chair]]
 	-  [[Listener]]
 	-  [[Reviewer]]
 	-  [[Author]]
