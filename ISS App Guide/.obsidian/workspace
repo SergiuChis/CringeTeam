@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Steps/dashboard.md",
+            "file": "restrictions.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Steps/dashboard.md",
+                "file": "restrictions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "9534bd4875161136",
   "lastOpenFiles": [
-    "Steps/dashboard.md",
-    "Create Conference.md",
-    "Update conference.md",
-    "Steps/Log in.md",
-    "Steps/Create user account.md",
     "restrictions.md",
-    "Roles/Session Chair.md",
+    "Conference Management System.md",
+    "Assigning papers.md",
+    "Roles/Steering Comitee.md",
     "Roles/Reviewer.md",
+    "Add Full Paper.md",
+    "Roles/Author.md",
+    "Submit Abstract.md",
     "Roles/Listener.md",
-    "Roles/Author.md"
+    "Steps/dashboard.md"
   ]
 }
