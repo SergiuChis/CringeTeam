@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Windows.Forms;
 using CringeProject.Entities;
+using CringeProject.Entities.Grades;
 using CringeProject.Services;
 
 namespace CringeProject.GUI {
@@ -22,33 +23,36 @@ namespace CringeProject.GUI {
         }
 
         private void strongAcceptButton_Click(object sender, EventArgs e) {
-
+            AddReview(Grades.StrongAccept);
         }
 
         private void acceptButton_Click(object sender, EventArgs e) {
-
+            AddReview(Grades.Accept);
         }
 
         private void weakAcceptButton_Click(object sender, EventArgs e) {
-
+            AddReview(Grades.WeakAccept);
         }
 
         private void borderlinePaperButton_Click(object sender, EventArgs e) {
-
+            AddReview(Grades.Neutral);
         }
 
         private void weakRejectButton_Click(object sender, EventArgs e) {
-
+            AddReview(Grades.WeakDecline);
         }
 
         private void rejectButton_Click(object sender, EventArgs e) {
-
+            AddReview(Grades.Decline);
         }
 
         private void strongRejectButton_Click(object sender, EventArgs e) {
-
+            AddReview(Grades.StrongDecline);
         }
 
-        
+        private async void AddReview(string grade) {
+            var selectedPaper = (Paper) papersListBox.SelectedItem;
+            await _service.AddReview(_participation.UserName, selectedPaper.Id, grade);
+        }
     }
 }
