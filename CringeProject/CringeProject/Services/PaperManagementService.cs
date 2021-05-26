@@ -20,7 +20,9 @@ namespace CringeProject.Services {
         }
 
         public IEnumerable<Paper> GetAllPapers(int sectionId) {
-            return _repository.Papers.Where(p => p.SectionId == sectionId);
+            var conferenceId = _repository.Sections.FirstOrDefault(s => s.Id == sectionId)?.ConferenceId;
+            var sectionIds = _repository.Sections.Where(s => s.ConferenceId == conferenceId).Select(s => s.Id);
+            return _repository.Papers.Where(p => sectionIds.Contains(p.SectionId));
         }
     }
 }

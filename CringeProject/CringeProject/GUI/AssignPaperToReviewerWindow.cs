@@ -24,7 +24,8 @@ namespace CringeProject.GUI {
 
         private void AssignPaperToReviewerWindow_Load(object sender, EventArgs e) {
             reviewersListBox.DataSource = _service.GetAllReviewers(_participation.SectionId).ToList();
-            papersListBox.DataSource = _service.GetAllPapers(_participation.SectionId).ToList();
+            var a = _service.GetAllPapers(_participation.SectionId).ToList();
+            papersListBox.DataSource = a;
         }
 
         private void assignPaperButton_Click(object sender, EventArgs e) {
