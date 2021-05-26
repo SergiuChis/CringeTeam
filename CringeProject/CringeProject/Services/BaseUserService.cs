@@ -23,6 +23,17 @@ namespace CringeProject.Services
         }
 
         public async Task<Status> AddPaperAsync(User user, int sectionId, string title, string abstract_, string body) {
+            var participation = _repository.Participations.FirstOrDefault(p => p.SectionId == sectionId);
+            var conferenceId = _repository.Sections
+                .Where(s => s.Id == participation.SectionId)
+                .Select(s => s.ConferenceId)
+                .FirstOrDefault();
+            var conference = _repository.Conferences.FirstOrDefault(c => c.Id == conferenceId);
+
+            if (conference?.PaperDeadline > DateTime.Now) {
+                return new Status("Paper submit date has passed.", false);
+            }
+
             if (string.IsNullOrEmpty(title) || (string.IsNullOrEmpty(abstract_) && string.IsNullOrEmpty(body)))
                 return new Status("Invalid paper.", false);
 

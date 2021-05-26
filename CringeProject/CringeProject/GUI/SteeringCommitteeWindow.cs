@@ -32,7 +32,7 @@ namespace CringeProject.GUI {
 
             newRoleComboBox.DataSource = new List<string>(new []{UserType.Listener, UserType.Reviewer, UserType.SessionChair});
 
-            usersListbox.DataSource = _steeringCommitteeService.GetUsersForConference(_conference.Id).ToList();
+            usersListbox.DataSource = _steeringCommitteeService.GetUsersForConference(_conference.Id).Where(u=>u.UserName != _participation.UserName).ToList();
         }
 
         private void updateUserRoleButton_Click(object sender, EventArgs e) {
