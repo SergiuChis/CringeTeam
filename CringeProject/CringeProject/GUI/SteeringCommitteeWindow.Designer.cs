@@ -40,6 +40,7 @@ namespace CringeProject.GUI {
             this.newRoleLabel = new System.Windows.Forms.Label();
             this.newRoleComboBox = new System.Windows.Forms.ComboBox();
             this.confirmChangeRoleButton = new System.Windows.Forms.Button();
+            this.assignPaperToReviewerButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -62,7 +63,7 @@ namespace CringeProject.GUI {
             // 
             // updateUserRoleButton
             // 
-            this.updateUserRoleButton.Location = new System.Drawing.Point(328, 325);
+            this.updateUserRoleButton.Location = new System.Drawing.Point(328, 296);
             this.updateUserRoleButton.Name = "updateUserRoleButton";
             this.updateUserRoleButton.Size = new System.Drawing.Size(137, 46);
             this.updateUserRoleButton.TabIndex = 3;
@@ -80,7 +81,7 @@ namespace CringeProject.GUI {
             // 
             // updateConferenceButton
             // 
-            this.updateConferenceButton.Location = new System.Drawing.Point(502, 325);
+            this.updateConferenceButton.Location = new System.Drawing.Point(502, 296);
             this.updateConferenceButton.Name = "updateConferenceButton";
             this.updateConferenceButton.Size = new System.Drawing.Size(163, 46);
             this.updateConferenceButton.TabIndex = 5;
@@ -106,7 +107,7 @@ namespace CringeProject.GUI {
             // 
             // addSectionButton
             // 
-            this.addSectionButton.Location = new System.Drawing.Point(502, 262);
+            this.addSectionButton.Location = new System.Drawing.Point(502, 233);
             this.addSectionButton.Name = "addSectionButton";
             this.addSectionButton.Size = new System.Drawing.Size(163, 45);
             this.addSectionButton.TabIndex = 8;
@@ -116,7 +117,7 @@ namespace CringeProject.GUI {
             // 
             // confirmAddSectionButton
             // 
-            this.confirmAddSectionButton.Location = new System.Drawing.Point(502, 262);
+            this.confirmAddSectionButton.Location = new System.Drawing.Point(502, 233);
             this.confirmAddSectionButton.Name = "confirmAddSectionButton";
             this.confirmAddSectionButton.Size = new System.Drawing.Size(163, 45);
             this.confirmAddSectionButton.TabIndex = 9;
@@ -127,7 +128,7 @@ namespace CringeProject.GUI {
             // roomLabel
             // 
             this.roomLabel.AutoSize = true;
-            this.roomLabel.Location = new System.Drawing.Point(328, 194);
+            this.roomLabel.Location = new System.Drawing.Point(328, 165);
             this.roomLabel.Name = "roomLabel";
             this.roomLabel.Size = new System.Drawing.Size(38, 13);
             this.roomLabel.TabIndex = 10;
@@ -136,7 +137,7 @@ namespace CringeProject.GUI {
             // availablePlacesLabel
             // 
             this.availablePlacesLabel.AutoSize = true;
-            this.availablePlacesLabel.Location = new System.Drawing.Point(328, 231);
+            this.availablePlacesLabel.Location = new System.Drawing.Point(328, 202);
             this.availablePlacesLabel.Name = "availablePlacesLabel";
             this.availablePlacesLabel.Size = new System.Drawing.Size(88, 13);
             this.availablePlacesLabel.TabIndex = 11;
@@ -144,14 +145,14 @@ namespace CringeProject.GUI {
             // 
             // roomTextBox
             // 
-            this.roomTextBox.Location = new System.Drawing.Point(427, 194);
+            this.roomTextBox.Location = new System.Drawing.Point(427, 165);
             this.roomTextBox.Name = "roomTextBox";
             this.roomTextBox.Size = new System.Drawing.Size(186, 20);
             this.roomTextBox.TabIndex = 12;
             // 
             // availablePlacesTextBox
             // 
-            this.availablePlacesTextBox.Location = new System.Drawing.Point(427, 228);
+            this.availablePlacesTextBox.Location = new System.Drawing.Point(427, 199);
             this.availablePlacesTextBox.Name = "availablePlacesTextBox";
             this.availablePlacesTextBox.Size = new System.Drawing.Size(186, 20);
             this.availablePlacesTextBox.TabIndex = 13;
@@ -159,7 +160,7 @@ namespace CringeProject.GUI {
             // newRoleLabel
             // 
             this.newRoleLabel.AutoSize = true;
-            this.newRoleLabel.Location = new System.Drawing.Point(328, 262);
+            this.newRoleLabel.Location = new System.Drawing.Point(328, 233);
             this.newRoleLabel.Name = "newRoleLabel";
             this.newRoleLabel.Size = new System.Drawing.Size(54, 13);
             this.newRoleLabel.TabIndex = 14;
@@ -168,14 +169,14 @@ namespace CringeProject.GUI {
             // newRoleComboBox
             // 
             this.newRoleComboBox.FormattingEnabled = true;
-            this.newRoleComboBox.Location = new System.Drawing.Point(331, 279);
+            this.newRoleComboBox.Location = new System.Drawing.Point(331, 250);
             this.newRoleComboBox.Name = "newRoleComboBox";
             this.newRoleComboBox.Size = new System.Drawing.Size(121, 21);
             this.newRoleComboBox.TabIndex = 15;
             // 
             // confirmChangeRoleButton
             // 
-            this.confirmChangeRoleButton.Location = new System.Drawing.Point(328, 325);
+            this.confirmChangeRoleButton.Location = new System.Drawing.Point(328, 296);
             this.confirmChangeRoleButton.Name = "confirmChangeRoleButton";
             this.confirmChangeRoleButton.Size = new System.Drawing.Size(137, 46);
             this.confirmChangeRoleButton.TabIndex = 16;
@@ -183,11 +184,22 @@ namespace CringeProject.GUI {
             this.confirmChangeRoleButton.UseVisualStyleBackColor = true;
             this.confirmChangeRoleButton.Click += new System.EventHandler(this.confirmChangeRoleButton_Click);
             // 
+            // assignPaperToReviewerButton
+            // 
+            this.assignPaperToReviewerButton.Location = new System.Drawing.Point(328, 348);
+            this.assignPaperToReviewerButton.Name = "assignPaperToReviewerButton";
+            this.assignPaperToReviewerButton.Size = new System.Drawing.Size(337, 38);
+            this.assignPaperToReviewerButton.TabIndex = 17;
+            this.assignPaperToReviewerButton.Text = "Assign Paper to Reviewer";
+            this.assignPaperToReviewerButton.UseVisualStyleBackColor = true;
+            this.assignPaperToReviewerButton.Click += new System.EventHandler(this.assignPaperToReviewerButton_Click);
+            // 
             // SteeringCommitteeWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(691, 406);
+            this.Controls.Add(this.assignPaperToReviewerButton);
             this.Controls.Add(this.confirmChangeRoleButton);
             this.Controls.Add(this.newRoleComboBox);
             this.Controls.Add(this.newRoleLabel);
@@ -230,5 +242,6 @@ namespace CringeProject.GUI {
         private System.Windows.Forms.Label newRoleLabel;
         private System.Windows.Forms.ComboBox newRoleComboBox;
         private System.Windows.Forms.Button confirmChangeRoleButton;
+        private System.Windows.Forms.Button assignPaperToReviewerButton;
     }
 }

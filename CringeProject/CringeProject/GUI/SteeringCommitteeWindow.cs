@@ -80,5 +80,9 @@ namespace CringeProject.GUI {
             roomTextBox.Text = "";
             roomTextBox.Hide();
         }
+
+        private void assignPaperToReviewerButton_Click(object sender, EventArgs e) {
+            WindowCreationFactory.CreatePaperAssignationWindow(_participation).Show();
+        }
     }
 }

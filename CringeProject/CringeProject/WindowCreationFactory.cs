@@ -63,7 +63,12 @@ namespace CringeProject {
 
         public static ReviewerWindow CreateReviewerWindow(User user, Participation participation) {
             var service = (ReviewerService)Program.ServiceProvider.GetService(typeof(ReviewerService));
-            return new ReviewerWindow(service);
+            return new ReviewerWindow(user, participation, service);
+        }
+
+        public static AssignPaperToReviewerWindow CreatePaperAssignationWindow(Participation participation) {
+            var service = (ReviewerService)Program.ServiceProvider.GetService(typeof(ReviewerService));
+            return new AssignPaperToReviewerWindow(participation, service);
         }
     }
 }
