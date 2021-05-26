@@ -89,14 +89,14 @@
   "active": "9534bd4875161136",
   "lastOpenFiles": [
     "Steps/dashboard.md",
-    "Pasted image 20210525214849.png",
+    "Create Conference.md",
+    "Update conference.md",
     "Steps/Log in.md",
-    "Conference Management System.md",
-    "dashboard.md",
     "Steps/Create user account.md",
     "restrictions.md",
-    "Log in.md",
-    "Create user account.md",
-    "Author.md"
+    "Roles/Session Chair.md",
+    "Roles/Reviewer.md",
+    "Roles/Listener.md",
+    "Roles/Author.md"
   ]
 }

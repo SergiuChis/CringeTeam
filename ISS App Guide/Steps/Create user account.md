@@ -13,3 +13,4 @@ To create an account, the user must press the "Create Account" button in the mai
 	2. password
 		- ~validation rules
 2. Press the "Create User" button to finish the account creation
+3. [[Log in]]
