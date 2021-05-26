@@ -43,10 +43,10 @@ namespace CringeProject {
             return new ListenerWindow(user, participation, listenerService);
         }
 
-        public static AddFullPaperWindow CreateAddPaperWindow(Paper paper)
+        public static AddFullPaperWindow CreateAddPaperWindow(Participation participation, Paper paper)
         {
             var paperManagementService = (PaperManagementService)Program.ServiceProvider.GetService(typeof(PaperManagementService));
-            return new AddFullPaperWindow(paper, paperManagementService);
+            return new AddFullPaperWindow(participation, paper, paperManagementService);
         }
 
         public static SubmitAbstractWindow CreateSubmitAbstractWindow(User user, Participation participation)

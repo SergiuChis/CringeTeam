@@ -28,7 +28,6 @@ namespace CringeProject.GUI {
             this.label2 = new System.Windows.Forms.Label();
             this.updateUserRoleButton = new System.Windows.Forms.Button();
             this.usersListbox = new System.Windows.Forms.ListBox();
-            this.updateConferenceButton = new System.Windows.Forms.Button();
             this.usernameLabel = new System.Windows.Forms.Label();
             this.roleLabel = new System.Windows.Forms.Label();
             this.addSectionButton = new System.Windows.Forms.Button();
@@ -76,18 +75,8 @@ namespace CringeProject.GUI {
             this.usersListbox.FormattingEnabled = true;
             this.usersListbox.Location = new System.Drawing.Point(12, 18);
             this.usersListbox.Name = "usersListbox";
-            this.usersListbox.Size = new System.Drawing.Size(287, 368);
+            this.usersListbox.Size = new System.Drawing.Size(287, 329);
             this.usersListbox.TabIndex = 4;
-            // 
-            // updateConferenceButton
-            // 
-            this.updateConferenceButton.Location = new System.Drawing.Point(502, 296);
-            this.updateConferenceButton.Name = "updateConferenceButton";
-            this.updateConferenceButton.Size = new System.Drawing.Size(163, 46);
-            this.updateConferenceButton.TabIndex = 5;
-            this.updateConferenceButton.Text = "Update Conference Details";
-            this.updateConferenceButton.UseVisualStyleBackColor = true;
-            this.updateConferenceButton.Click += new System.EventHandler(this.updateConferenceButton_Click);
             // 
             // usernameLabel
             // 
@@ -186,9 +175,9 @@ namespace CringeProject.GUI {
             // 
             // assignPaperToReviewerButton
             // 
-            this.assignPaperToReviewerButton.Location = new System.Drawing.Point(328, 348);
+            this.assignPaperToReviewerButton.Location = new System.Drawing.Point(502, 296);
             this.assignPaperToReviewerButton.Name = "assignPaperToReviewerButton";
-            this.assignPaperToReviewerButton.Size = new System.Drawing.Size(337, 38);
+            this.assignPaperToReviewerButton.Size = new System.Drawing.Size(163, 46);
             this.assignPaperToReviewerButton.TabIndex = 17;
             this.assignPaperToReviewerButton.Text = "Assign Paper to Reviewer";
             this.assignPaperToReviewerButton.UseVisualStyleBackColor = true;
@@ -198,7 +187,7 @@ namespace CringeProject.GUI {
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(691, 406);
+            this.ClientSize = new System.Drawing.Size(691, 359);
             this.Controls.Add(this.assignPaperToReviewerButton);
             this.Controls.Add(this.confirmChangeRoleButton);
             this.Controls.Add(this.newRoleComboBox);
@@ -211,7 +200,6 @@ namespace CringeProject.GUI {
             this.Controls.Add(this.addSectionButton);
             this.Controls.Add(this.roleLabel);
             this.Controls.Add(this.usernameLabel);
-            this.Controls.Add(this.updateConferenceButton);
             this.Controls.Add(this.usersListbox);
             this.Controls.Add(this.updateUserRoleButton);
             this.Controls.Add(this.label2);
@@ -230,7 +218,6 @@ namespace CringeProject.GUI {
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button updateUserRoleButton;
         private System.Windows.Forms.ListBox usersListbox;
-        private System.Windows.Forms.Button updateConferenceButton;
         private System.Windows.Forms.Label usernameLabel;
         private System.Windows.Forms.Label roleLabel;
         private System.Windows.Forms.Button addSectionButton;

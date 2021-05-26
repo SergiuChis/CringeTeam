@@ -38,7 +38,7 @@ namespace CringeProject.GUI
 
         private void addPaperButton_Click(object sender, EventArgs e) {
             var selectedPaper = (Paper) myPapersListBox.SelectedItem;
-            WindowCreationFactory.CreateAddPaperWindow(selectedPaper).Show();
+            WindowCreationFactory.CreateAddPaperWindow(_participation, selectedPaper).Show();
         }
 
         private void submitAbstractButton_Click(object sender, EventArgs e) {

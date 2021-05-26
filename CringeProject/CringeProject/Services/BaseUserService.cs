@@ -30,8 +30,8 @@ namespace CringeProject.Services
                 .FirstOrDefault();
             var conference = _repository.Conferences.FirstOrDefault(c => c.Id == conferenceId);
 
-            if (conference?.PaperDeadline > DateTime.Now) {
-                return new Status("Paper submit date has passed.", false);
+            if (conference?.AbstractDeadline < DateTime.Now) {
+                return new Status("Abstract submit date has passed.", false);
             }
 
             if (string.IsNullOrEmpty(title) || (string.IsNullOrEmpty(abstract_) && string.IsNullOrEmpty(body)))
@@ -50,11 +50,21 @@ namespace CringeProject.Services
             return new Status("Success!", true);
         }
 
-        public async Task<Status> UpdatePaperAsync(int paperId, string newAbstract_, string newBody) {
+        public async Task<Status> UpdatePaperAsync(Participation participation, int paperId, string newAbstract_, string newBody) {
             var paper = _repository.Papers.FirstOrDefault(p => p.Id == paperId);
 
             if (paper == null)
                 return new Status("Invalid paper ID.", false);
+
+            var conferenceId = _repository.Sections
+                .Where(s => s.Id == participation.SectionId)
+                .Select(s => s.ConferenceId)
+                .FirstOrDefault();
+            var conference = _repository.Conferences.FirstOrDefault(c => c.Id == conferenceId);
+
+            if (conference?.PaperDeadline < DateTime.Now) {
+                return new Status("Paper submit date has passed.", false);
+            }
 
             if (!string.IsNullOrEmpty(newAbstract_))
                 paper.Abstract = newAbstract_;
