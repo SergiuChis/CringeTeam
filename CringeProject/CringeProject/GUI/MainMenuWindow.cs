@@ -63,5 +63,10 @@ namespace CringeProject.GUI
 
             errorsLabel.Text = status.Message;
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

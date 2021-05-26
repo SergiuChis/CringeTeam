@@ -47,7 +47,7 @@ namespace CringeProject.GUI {
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(80, 61);
+            this.label1.Location = new System.Drawing.Point(90, 71);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 1;
@@ -56,7 +56,7 @@ namespace CringeProject.GUI {
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(80, 118);
+            this.label2.Location = new System.Drawing.Point(90, 128);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 2;
@@ -88,7 +88,7 @@ namespace CringeProject.GUI {
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(80, 170);
+            this.label3.Location = new System.Drawing.Point(90, 180);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 13);
             this.label3.TabIndex = 5;
@@ -97,7 +97,7 @@ namespace CringeProject.GUI {
             // creationStatusLabel
             // 
             this.creationStatusLabel.AutoSize = true;
-            this.creationStatusLabel.Location = new System.Drawing.Point(171, 230);
+            this.creationStatusLabel.Location = new System.Drawing.Point(181, 240);
             this.creationStatusLabel.Name = "creationStatusLabel";
             this.creationStatusLabel.Size = new System.Drawing.Size(0, 13);
             this.creationStatusLabel.TabIndex = 7;
@@ -106,6 +106,7 @@ namespace CringeProject.GUI {
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(538, 344);
             this.Controls.Add(this.creationStatusLabel);
             this.Controls.Add(this.confirmedPasswordTextbox);
@@ -115,7 +116,9 @@ namespace CringeProject.GUI {
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.createUserButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "CreateUserWindow";
+            this.Padding = new System.Windows.Forms.Padding(10);
             this.Text = "CreateUserWindow";
             this.ResumeLayout(false);
             this.PerformLayout();

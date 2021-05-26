@@ -47,89 +47,100 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Location = new System.Drawing.Point(16, 17);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(182, 25);
+            this.label1.Size = new System.Drawing.Size(91, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Conference name";
             // 
             // conferenceNameBox
             // 
-            this.conferenceNameBox.Location = new System.Drawing.Point(274, 13);
+            this.conferenceNameBox.Location = new System.Drawing.Point(137, 7);
+            this.conferenceNameBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.conferenceNameBox.Name = "conferenceNameBox";
-            this.conferenceNameBox.Size = new System.Drawing.Size(334, 31);
+            this.conferenceNameBox.Size = new System.Drawing.Size(169, 18);
             this.conferenceNameBox.TabIndex = 1;
             this.conferenceNameBox.Text = "";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 265);
+            this.label2.Location = new System.Drawing.Point(16, 148);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(222, 25);
+            this.label2.Size = new System.Drawing.Size(110, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Deadline for abstracts";
             // 
             // deadlineForAbstractsBox
             // 
-            this.deadlineForAbstractsBox.Location = new System.Drawing.Point(274, 265);
+            this.deadlineForAbstractsBox.Location = new System.Drawing.Point(137, 138);
+            this.deadlineForAbstractsBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.deadlineForAbstractsBox.Name = "deadlineForAbstractsBox";
-            this.deadlineForAbstractsBox.Size = new System.Drawing.Size(417, 31);
+            this.deadlineForAbstractsBox.Size = new System.Drawing.Size(210, 20);
             this.deadlineForAbstractsBox.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 345);
+            this.label3.Location = new System.Drawing.Point(16, 189);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(200, 25);
+            this.label3.Size = new System.Drawing.Size(99, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "Deadline for papers";
             // 
             // deadlineForPapersBox
             // 
-            this.deadlineForPapersBox.Location = new System.Drawing.Point(274, 339);
+            this.deadlineForPapersBox.Location = new System.Drawing.Point(137, 176);
+            this.deadlineForPapersBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.deadlineForPapersBox.Name = "deadlineForPapersBox";
-            this.deadlineForPapersBox.Size = new System.Drawing.Size(417, 31);
+            this.deadlineForPapersBox.Size = new System.Drawing.Size(210, 20);
             this.deadlineForPapersBox.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 99);
+            this.label4.Location = new System.Drawing.Point(16, 61);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 25);
+            this.label4.Size = new System.Drawing.Size(53, 13);
             this.label4.TabIndex = 6;
             this.label4.Text = "Start date";
             // 
             // startDateBox
             // 
-            this.startDateBox.Location = new System.Drawing.Point(274, 99);
+            this.startDateBox.Location = new System.Drawing.Point(137, 51);
+            this.startDateBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.startDateBox.Name = "startDateBox";
-            this.startDateBox.Size = new System.Drawing.Size(417, 31);
+            this.startDateBox.Size = new System.Drawing.Size(210, 20);
             this.startDateBox.TabIndex = 7;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 182);
+            this.label5.Location = new System.Drawing.Point(16, 105);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(98, 25);
+            this.label5.Size = new System.Drawing.Size(50, 13);
             this.label5.TabIndex = 8;
             this.label5.Text = "End date";
             // 
             // endDateBox
             // 
-            this.endDateBox.Location = new System.Drawing.Point(274, 182);
+            this.endDateBox.Location = new System.Drawing.Point(137, 95);
+            this.endDateBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.endDateBox.Name = "endDateBox";
-            this.endDateBox.Size = new System.Drawing.Size(417, 31);
+            this.endDateBox.Size = new System.Drawing.Size(210, 20);
             this.endDateBox.TabIndex = 9;
             // 
             // addConference
             // 
-            this.addConference.Location = new System.Drawing.Point(130, 447);
+            this.addConference.Location = new System.Drawing.Point(65, 232);
+            this.addConference.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.addConference.Name = "addConference";
-            this.addConference.Size = new System.Drawing.Size(428, 99);
+            this.addConference.Size = new System.Drawing.Size(214, 51);
             this.addConference.TabIndex = 12;
             this.addConference.Text = "Add conference";
             this.addConference.UseVisualStyleBackColor = true;
@@ -141,9 +152,10 @@
             // 
             // CreateConferenceWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(707, 579);
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ClientSize = new System.Drawing.Size(376, 309);
             this.Controls.Add(this.addConference);
             this.Controls.Add(this.endDateBox);
             this.Controls.Add(this.label5);
@@ -155,7 +167,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.conferenceNameBox);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "CreateConferenceWindow";
+            this.Padding = new System.Windows.Forms.Padding(10);
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "CreateConferenceWindow";
             this.Load += new System.EventHandler(this.CreateConferenceWindow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.sectionBindingSource)).EndInit();

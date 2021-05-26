@@ -41,7 +41,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(87, 15);
+            this.label1.Location = new System.Drawing.Point(69, 10);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(112, 13);
@@ -92,11 +92,12 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(435, 15);
+            this.label2.Location = new System.Drawing.Point(426, 10);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(150, 13);
             this.label2.TabIndex = 6;
             this.label2.Text = "Conferences you participate in";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // conferencesWithParticipationsList
             // 
@@ -109,7 +110,7 @@
             // errorsLabel
             // 
             this.errorsLabel.AutoSize = true;
-            this.errorsLabel.Location = new System.Drawing.Point(308, 163);
+            this.errorsLabel.Location = new System.Drawing.Point(318, 173);
             this.errorsLabel.Name = "errorsLabel";
             this.errorsLabel.Size = new System.Drawing.Size(0, 13);
             this.errorsLabel.TabIndex = 8;
@@ -118,6 +119,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(642, 472);
             this.Controls.Add(this.errorsLabel);
             this.Controls.Add(this.conferencesWithParticipationsList);
@@ -127,8 +129,10 @@
             this.Controls.Add(this.availableConferencesList);
             this.Controls.Add(this.createConference);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainMenuWindow";
+            this.Padding = new System.Windows.Forms.Padding(10);
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.BaseUserWindow_Load);
             this.ResumeLayout(false);

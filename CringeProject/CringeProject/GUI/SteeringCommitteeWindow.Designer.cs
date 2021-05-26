@@ -42,7 +42,7 @@ namespace CringeProject.GUI {
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(325, 40);
+            this.label1.Location = new System.Drawing.Point(346, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 1;
@@ -51,17 +51,18 @@ namespace CringeProject.GUI {
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(336, 104);
+            this.label2.Location = new System.Drawing.Point(346, 69);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(32, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Role:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // updateUserRoleButton
             // 
-            this.updateUserRoleButton.Location = new System.Drawing.Point(328, 325);
+            this.updateUserRoleButton.Location = new System.Drawing.Point(483, 252);
             this.updateUserRoleButton.Name = "updateUserRoleButton";
-            this.updateUserRoleButton.Size = new System.Drawing.Size(137, 46);
+            this.updateUserRoleButton.Size = new System.Drawing.Size(163, 46);
             this.updateUserRoleButton.TabIndex = 3;
             this.updateUserRoleButton.Text = "Update Role";
             this.updateUserRoleButton.UseVisualStyleBackColor = true;
@@ -77,7 +78,7 @@ namespace CringeProject.GUI {
             // 
             // updateConferenceButton
             // 
-            this.updateConferenceButton.Location = new System.Drawing.Point(502, 325);
+            this.updateConferenceButton.Location = new System.Drawing.Point(305, 252);
             this.updateConferenceButton.Name = "updateConferenceButton";
             this.updateConferenceButton.Size = new System.Drawing.Size(163, 46);
             this.updateConferenceButton.TabIndex = 5;
@@ -88,7 +89,7 @@ namespace CringeProject.GUI {
             // usernameLabel
             // 
             this.usernameLabel.AutoSize = true;
-            this.usernameLabel.Location = new System.Drawing.Point(424, 92);
+            this.usernameLabel.Location = new System.Drawing.Point(434, 102);
             this.usernameLabel.Name = "usernameLabel";
             this.usernameLabel.Size = new System.Drawing.Size(0, 13);
             this.usernameLabel.TabIndex = 6;
@@ -96,14 +97,14 @@ namespace CringeProject.GUI {
             // roleLabel
             // 
             this.roleLabel.AutoSize = true;
-            this.roleLabel.Location = new System.Drawing.Point(424, 156);
+            this.roleLabel.Location = new System.Drawing.Point(434, 166);
             this.roleLabel.Name = "roleLabel";
             this.roleLabel.Size = new System.Drawing.Size(0, 13);
             this.roleLabel.TabIndex = 7;
             // 
             // addSectionButton
             // 
-            this.addSectionButton.Location = new System.Drawing.Point(502, 262);
+            this.addSectionButton.Location = new System.Drawing.Point(483, 327);
             this.addSectionButton.Name = "addSectionButton";
             this.addSectionButton.Size = new System.Drawing.Size(163, 45);
             this.addSectionButton.TabIndex = 8;
@@ -113,7 +114,7 @@ namespace CringeProject.GUI {
             // 
             // confirmAddSectionButton
             // 
-            this.confirmAddSectionButton.Location = new System.Drawing.Point(502, 262);
+            this.confirmAddSectionButton.Location = new System.Drawing.Point(305, 327);
             this.confirmAddSectionButton.Name = "confirmAddSectionButton";
             this.confirmAddSectionButton.Size = new System.Drawing.Size(163, 45);
             this.confirmAddSectionButton.TabIndex = 9;
@@ -124,7 +125,7 @@ namespace CringeProject.GUI {
             // roomLabel
             // 
             this.roomLabel.AutoSize = true;
-            this.roomLabel.Location = new System.Drawing.Point(328, 194);
+            this.roomLabel.Location = new System.Drawing.Point(302, 124);
             this.roomLabel.Name = "roomLabel";
             this.roomLabel.Size = new System.Drawing.Size(38, 13);
             this.roomLabel.TabIndex = 10;
@@ -133,7 +134,7 @@ namespace CringeProject.GUI {
             // availablePlacesLabel
             // 
             this.availablePlacesLabel.AutoSize = true;
-            this.availablePlacesLabel.Location = new System.Drawing.Point(328, 231);
+            this.availablePlacesLabel.Location = new System.Drawing.Point(302, 178);
             this.availablePlacesLabel.Name = "availablePlacesLabel";
             this.availablePlacesLabel.Size = new System.Drawing.Size(88, 13);
             this.availablePlacesLabel.TabIndex = 11;
@@ -141,14 +142,14 @@ namespace CringeProject.GUI {
             // 
             // roomTextBox
             // 
-            this.roomTextBox.Location = new System.Drawing.Point(427, 194);
+            this.roomTextBox.Location = new System.Drawing.Point(349, 124);
             this.roomTextBox.Name = "roomTextBox";
             this.roomTextBox.Size = new System.Drawing.Size(186, 20);
             this.roomTextBox.TabIndex = 12;
             // 
             // availablePlacesTextBox
             // 
-            this.availablePlacesTextBox.Location = new System.Drawing.Point(427, 228);
+            this.availablePlacesTextBox.Location = new System.Drawing.Point(396, 178);
             this.availablePlacesTextBox.Name = "availablePlacesTextBox";
             this.availablePlacesTextBox.Size = new System.Drawing.Size(186, 20);
             this.availablePlacesTextBox.TabIndex = 13;
@@ -157,6 +158,7 @@ namespace CringeProject.GUI {
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(691, 406);
             this.Controls.Add(this.availablePlacesTextBox);
             this.Controls.Add(this.roomTextBox);
@@ -171,7 +173,9 @@ namespace CringeProject.GUI {
             this.Controls.Add(this.updateUserRoleButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "SteeringCommitteeWindow";
+            this.Padding = new System.Windows.Forms.Padding(10);
             this.Text = "SteeringCommitteeWindow";
             this.Load += new System.EventHandler(this.SteeringCommitteeWindow_Load);
             this.ResumeLayout(false);

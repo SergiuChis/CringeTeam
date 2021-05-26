@@ -231,21 +231,9 @@
     </Compile>
     <Compile Include="Messages\ReviewStatus.cs" />
     <Compile Include="Messages\Status.cs" />
-    <Compile Include="Migrations\202105212027159_omleta.cs" />
-    <Compile Include="Migrations\202105212027159_omleta.designer.cs">
-      <DependentUpon>202105212027159_omleta.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105212029272_cotlet.cs" />
-    <Compile Include="Migrations\202105212029272_cotlet.designer.cs">
-      <DependentUpon>202105212029272_cotlet.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105231813359_sections-modifications.cs" />
-    <Compile Include="Migrations\202105231813359_sections-modifications.designer.cs">
-      <DependentUpon>202105231813359_sections-modifications.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105231815162_sections-modifications-2.cs" />
-    <Compile Include="Migrations\202105231815162_sections-modifications-2.designer.cs">
-      <DependentUpon>202105231815162_sections-modifications-2.cs</DependentUpon>
+    <Compile Include="Migrations\202105252036450_initial.cs" />
+    <Compile Include="Migrations\202105252036450_initial.designer.cs">
+      <DependentUpon>202105252036450_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
@@ -272,20 +260,17 @@
     <EmbeddedResource Include="GUI\LoginWindow.resx">
       <DependentUpon>LoginWindow.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ReviewerWindow.resx">
+      <DependentUpon>ReviewerWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\SteeringCommitteeWindow.resx">
       <DependentUpon>SteeringCommitteeWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105212027159_omleta.resx">
-      <DependentUpon>202105212027159_omleta.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\UpdateConferenceDetailsWindow.resx">
+      <DependentUpon>UpdateConferenceDetailsWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105212029272_cotlet.resx">
-      <DependentUpon>202105212029272_cotlet.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105231813359_sections-modifications.resx">
-      <DependentUpon>202105231813359_sections-modifications.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105231815162_sections-modifications-2.resx">
-      <DependentUpon>202105231815162_sections-modifications-2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105252036450_initial.resx">
+      <DependentUpon>202105252036450_initial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

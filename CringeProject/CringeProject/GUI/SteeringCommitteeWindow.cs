@@ -53,5 +53,10 @@ namespace CringeProject.GUI {
             roomTextBox.Text = "";
             roomTextBox.Hide();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
